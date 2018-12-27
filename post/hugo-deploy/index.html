@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-12-27T00:20:37&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-27T00:20:37&#43;09:00" />
-<meta itemprop="wordCount" content="1236">
+<meta itemprop="wordCount" content="1336">
 
 
 
@@ -175,7 +175,7 @@ User Pagesは<code>https://&lt;USERNAME&gt;.github.io</code>というURLでア�
 <p>最後のコマンドについて<br />
 <code>hugo</code>コマンドでサイトをビルドすると<code>public</code>にファイルが生成されます。そこで<code>public</code>フォルダだけ別のリポジトリにすることで分けて管理することができます(サブモジュール)。</p>
 
-<p>あとは<code>config.toml</code>の<code>baseURL</code>を書き換えてあげればいい感じ</p>
+<p>あとは<code>config.toml</code>の<code>baseURL</code>を書き換えてあげればいい感じ(この公開方法だと<code>/</code>がトップだから変えなくても一応動きそう？)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt">1
@@ -187,7 +187,8 @@ User Pagesは<code>https://&lt;USERNAME&gt;.github.io</code>というURLでア�
 <h1 id="デプロイのスクリプト化">デプロイのスクリプト化</h1>
 
 <p>基本は公式ドキュメントにあるスクリプトのままです<br />
-<code>hugo-blog</code>をcommit/pushするコードを加えました</p>
+<code>hugo-blog</code>をcommit/pushするコードを加えました<br />
+以下を<code>deploy.sh</code>として作成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
@@ -218,6 +219,7 @@ User Pagesは<code>https://&lt;USERNAME&gt;.github.io</code>というURLでア�
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
+</span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
@@ -246,11 +248,13 @@ git push origin master
 <span class="nb">cd</span> ..
 
 <span class="c1"># Commit hugo project</span>
+git add .
 git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
 git push origin master</code></pre></td></tr></table>
 </div>
 </div>
-<p><code>chmod +x deploy.sh</code>で実行権を与えてあげるのを忘れずに</p>
+<p><code>chmod +x deploy.sh</code>で実行権を与えてあげるのを忘れずに<br />
+これで<code>./deploy</code>でデプロイしてくれるようになる</p>
 
 <p>リポジトリ名を<code>&lt;USERNAME&gt;.github.io</code>にすると特に設定しなくても自動的にgithub pagesに公開されるっぽい？(要確認)<br />
 実際にデプロイしてみて<code>https://&lt;USERNAME&gt;.github.io/</code>にアクセスしてみて正しく表示されれば成功<br />
@@ -293,7 +297,7 @@ atom ./ <span class="o">&amp;&amp;</span> atom ./content/post/<span class="nv">$
 </div>
 </div>
 <p><code>./new.sh &lt;ARTICLE NAME&gt;</code>と叩くと新しくファイルを作ってAtomで開いてくれます<br />
-<code>atom</code>コマンドをインストールしていない場合はAtomのメニューのAtom→Install Shell Commands</p>
+<code>atom</code>コマンドをインストールしていない場合はMacの場合はAtomのメニューのAtom→Install Shell Commandsからインストール</p>
 
     </div>
 
