@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-12-27T00:20:37&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-27T00:20:37&#43;09:00" />
-<meta itemprop="wordCount" content="1336">
+<meta itemprop="wordCount" content="1613">
 
 
 
@@ -138,6 +138,11 @@
 <ul>
 <li><a href="#github-pagesに公開する">GitHub Pagesに公開する</a></li>
 <li><a href="#デプロイのスクリプト化">デプロイのスクリプト化</a></li>
+<li><a href="#独自ドメインの設定">独自ドメインの設定</a>
+<ul>
+<li><a href="#dns設定をする">DNS設定をする</a></li>
+<li><a href="#github側の設定">GitHub側の設定</a></li>
+</ul></li>
 <li><a href="#記事作成のスクリプト化">記事作成のスクリプト化</a></li>
 </ul>
 </nav>
@@ -259,6 +264,20 @@ git push origin master</code></pre></td></tr></table>
 <p>リポジトリ名を<code>&lt;USERNAME&gt;.github.io</code>にすると特に設定しなくても自動的にgithub pagesに公開されるっぽい？(要確認)<br />
 実際にデプロイしてみて<code>https://&lt;USERNAME&gt;.github.io/</code>にアクセスしてみて正しく表示されれば成功<br />
 pushしてから反映まで少し時間がかかる場合があるので注意</p>
+
+<h1 id="独自ドメインの設定">独自ドメインの設定</h1>
+
+<h2 id="dns設定をする">DNS設定をする</h2>
+
+<p>サービスによって設定方法は違うので各マニュアルを参照<br />
+<code>blog.kaio.ga CNAME murufon.github.io</code></p>
+
+<h2 id="github側の設定">GitHub側の設定</h2>
+
+<p><code>static/</code>に<code>CNAME</code>という名前のテキストファイルを作成する(拡張子なし)。中身は設定したいカスタムドメインのみ<br />
+hugoでビルドすると公開サイトのリポジトリのルートにCNAMEが置かれる<br />
+github pagesはルートのCNAMEを見て独自ドメインの設定を判断しているらしい<br />
+これをpushしてしばらくすると<code>murufon.github.io</code>リポジトリのSettings→GitHub Pages→Enforce HTTPSが設定可能になるので設定しておく</p>
 
 <h1 id="記事作成のスクリプト化">記事作成のスクリプト化</h1>
 
