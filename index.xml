@@ -6,10 +6,19 @@
     <description>Recent content on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Dec 2018 00:20:37 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 28 Dec 2018 00:38:57 +0900</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 28 Dec 2018 00:38:57 +0900</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>About Me はじめまして。むるふぉんと申します 2017年ごろから趣味でWeb系のことを勉強しています 使っている技術(よく使っている順) CSS HTML Docker Git JavaScript Python3 C</description>
+    </item>
     
     <item>
       <title>Hugoのデプロイ</title>
