@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.53 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://murufon.github.io/post/hugo-deploy/" />
+<link rel="canonical" href="http://localhost:1313/post/hugo-deploy/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,7 +41,7 @@
 <meta property="og:title" content="Hugoのデプロイ" />
 <meta property="og:description" content="GitHub Pagesを使って作ったサイトを公開してみたいと思います リポジトリ名や公開するフォルダによっていくつかやり方がありますが、独自ドメインにす" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://murufon.github.io/post/hugo-deploy/" /><meta property="article:published_time" content="2018-12-27T00:20:37&#43;09:00"/>
+<meta property="og:url" content="http://localhost:1313/post/hugo-deploy/" /><meta property="article:published_time" content="2018-12-27T00:20:37&#43;09:00"/>
 <meta property="article:modified_time" content="2018-12-27T00:20:37&#43;09:00"/>
 
 <meta itemprop="name" content="Hugoのデプロイ">
@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-12-27T00:20:37&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-27T00:20:37&#43;09:00" />
-<meta itemprop="wordCount" content="1178">
+<meta itemprop="wordCount" content="1236">
 
 
 
@@ -175,6 +175,15 @@ User Pagesは<code>https://&lt;USERNAME&gt;.github.io</code>というURLでア�
 <p>最後のコマンドについて<br />
 <code>hugo</code>コマンドでサイトをビルドすると<code>public</code>にファイルが生成されます。そこで<code>public</code>フォルダだけ別のリポジトリにすることで分けて管理することができます(サブモジュール)。</p>
 
+<p>あとは<code>config.toml</code>の<code>baseURL</code>を書き換えてあげればいい感じ</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://murufon.github.io/&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
 <h1 id="デプロイのスクリプト化">デプロイのスクリプト化</h1>
 
 <p>基本は公式ドキュメントにあるスクリプトのままです<br />
@@ -243,8 +252,9 @@ git push origin master</code></pre></td></tr></table>
 </div>
 <p><code>chmod +x deploy.sh</code>で実行権を与えてあげるのを忘れずに</p>
 
-<p>GitHubのリポジトリのページ行き、setting→GitHub Pages→Sourceから<code>master branch /docs folder</code>を選択→Save<br />
-即座に反映されるわけではないので少し待ってから<code>Your site is ready to be published at https://murufon.github.io/blog/</code>のところから飛んでみて表示されれば成功</p>
+<p>リポジトリ名を<code>&lt;USERNAME&gt;.github.io</code>にすると特に設定しなくても自動的にgithub pagesに公開されるっぽい？(要確認)<br />
+実際にデプロイしてみて<code>https://&lt;USERNAME&gt;.github.io/</code>にアクセスしてみて正しく表示されれば成功<br />
+pushしてから反映まで少し時間がかかる場合があるので注意</p>
 
 <h1 id="記事作成のスクリプト化">記事作成のスクリプト化</h1>
 
@@ -323,7 +333,7 @@ atom ./ <span class="o">&amp;&amp;</span> atom ./content/post/<span class="nv">$
       <a href="mailto:muruofn2@gmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://twitter.com/murufon" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://github.com/murufon" class="iconfont icon-github" title="github"></a>
-  <a href="https://murufon.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
