@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>Raspberry Piのセットアップ(Raspbian)</title>
-      <link>https://blog.kaio.ga/post/rpi-raspbian-setup/</link>
+      <title>プロキシサーバー</title>
+      <link>https://blog.kaio.ga/post/proxy-server/</link>
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/rpi-raspbian-setup/</guid>
-      <description>murufonがRaspberry Pi 3 をセットアップした手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミ</description>
+      <guid>https://blog.kaio.ga/post/proxy-server/</guid>
+      <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
     </item>
     
     <item>
@@ -48,12 +48,12 @@
     </item>
     
     <item>
-      <title>プロキシサーバー</title>
-      <link>https://blog.kaio.ga/post/proxy-server/</link>
+      <title>Raspberry Piのセットアップ(Raspbian)</title>
+      <link>https://blog.kaio.ga/post/rpi-raspbian-setup/</link>
       <pubDate>Fri, 28 Dec 2018 17:22:12 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/proxy-server/</guid>
-      <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
+      <guid>https://blog.kaio.ga/post/rpi-raspbian-setup/</guid>
+      <description>Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード</description>
     </item>
     
     <item>
@@ -77,7 +77,7 @@
     <item>
       <title>Hugoのインストール</title>
       <link>https://blog.kaio.ga/post/hugo-install/</link>
-      <pubDate>Wed, 26 Dec 2018 21:49:19 +0900</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://blog.kaio.ga/post/hugo-install/</guid>
       <description>hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し</description>

@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="murufon" /><meta name="description" content="murufonがRaspberry Pi 3 をセットアップした手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミ" /><meta name="keywords" content="murufon, programming, blog" />
+<meta name="author" content="murufon" /><meta name="description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード" /><meta name="keywords" content="murufon, programming, blog" />
 
 
 
@@ -39,25 +39,25 @@
 
 
 <meta property="og:title" content="Raspberry Piのセットアップ(Raspbian)" />
-<meta property="og:description" content="murufonがRaspberry Pi 3 をセットアップした手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミ" />
+<meta property="og:description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.kaio.ga/post/rpi-raspbian-setup/" /><meta property="article:published_time" content="2018-12-28T17:49:25&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-28T17:49:25&#43;09:00"/>
+<meta property="og:url" content="https://blog.kaio.ga/post/rpi-raspbian-setup/" /><meta property="article:published_time" content="2018-12-28T17:22:12&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-28T17:22:12&#43;09:00"/>
 
 <meta itemprop="name" content="Raspberry Piのセットアップ(Raspbian)">
-<meta itemprop="description" content="murufonがRaspberry Pi 3 をセットアップした手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミ">
+<meta itemprop="description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード">
 
 
-<meta itemprop="datePublished" content="2018-12-28T17:49:25&#43;09:00" />
-<meta itemprop="dateModified" content="2018-12-28T17:49:25&#43;09:00" />
-<meta itemprop="wordCount" content="649">
+<meta itemprop="datePublished" content="2018-12-28T17:22:12&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-28T17:22:12&#43;09:00" />
+<meta itemprop="wordCount" content="1136">
 
 
 
 <meta itemprop="keywords" content="Raspberry Pi,自宅サーバー," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Raspberry Piのセットアップ(Raspbian)"/>
-<meta name="twitter:description" content="murufonがRaspberry Pi 3 をセットアップした手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミ"/>
+<meta name="twitter:description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -161,17 +161,39 @@
     <div class="post-content">
       
 
-<p>murufonがRaspberry Pi 3 をセットアップした手順と参考にしたリンクのまとめ</p>
+<p>Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ</p>
 
 <h2 id="raspbianのインストール">Raspbianのインストール</h2>
 
 <p>raspbian日本のミラーサイト - Qiita<br />
 <a href="https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8">https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8</a></p>
 
+<p>SDカードへの書き込みはEtcher <a href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></p>
+
 <h2 id="初期設定">初期設定</h2>
 
 <p>Raspberry Piをディスプレイ・キーボード・マウス無しの三重苦でもセットアップする方法 - karaage. [からあげ]<br />
 <a href="http://karaage.hatenadiary.jp/entry/2015/07/15/080000">http://karaage.hatenadiary.jp/entry/2015/07/15/080000</a></p>
+
+<p>ちなみに、↑のサイトではネットワーク内のIPアドレスを一覧表示させる方法でやっているが、Raspberry Piには初めからホスト名が設定されているので、IPアドレスを調べなくてもssh接続できる場合がある</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh pi@raspberrypi.local</code></pre></td></tr></table>
+</div>
+</div>
+<p>sshでのアクセスが可能になったら、</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo raspi-config</code></pre></td></tr></table>
+</div>
+</div>
+<p>で各種設定をしておくと良い</p>
 
 <h2 id="sdカードでの設定">SDカードでの設定</h2>
 
@@ -186,6 +208,26 @@
 
 <p>固定IPアドレスの設定（Wi-Fi（無線LAN）の場合）<br />
 <a href="http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html">http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html</a></p>
+
+<p>固定IPアドレスの設定（有線LANの場合）<br />
+<a href="https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html">https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html</a></p>
+
+<p>今回は以下のように設定しました</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">interface eth0
+static <span class="nv">ip_address</span><span class="o">=</span><span class="m">192</span>.168.1.50/24
+static <span class="nv">routers</span><span class="o">=</span><span class="m">192</span>.168.1.1
+static <span class="nv">domain_name_servers</span><span class="o">=</span><span class="m">192</span>.168.1.1</code></pre></td></tr></table>
+</div>
+</div>
+<p>設定した後はインターフェイスの再起動か本体の再起動を</p>
 
 <h3 id="ポートの開放">ポートの開放</h3>
 
@@ -207,11 +249,59 @@ Raspberry PiにDocker ComposeでownCloudを導入する - さやかちゃんド�
 <h2 id="usbから外付けhddで起動させる">USBから外付けHDDで起動させる</h2>
 
 <p>DockerでいろいろするにはSDカードでの起動では不安だった<br />
-HDDのみでブートまでしてしまう方法もあるようだが、今回は不要と判断し、以下のURLのように設定</p>
+HDDのみでブートまでしてしまう方法もあるようだが、今回はブートはSDで</p>
 
-<p>Raspberry PiをUSB(HDD)で起動させる<br />
+<p>(参考)<br />
+Raspberry PiをUSB(HDD)で起動させる<br />
 <a href="https://jyn.jp/raspberrypi-usb-boot/">https://jyn.jp/raspberrypi-usb-boot/</a></p>
 
+<p><code>/dev/sda3</code>は各自読み替えてください</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># インストールするパーティションがどこにマウントされているか探す</span>
+sudo fdisk -l
+<span class="c1"># アンマウントする</span>
+umount /dev/sda3
+<span class="c1"># フォーマットする</span>
+sudo mkfs.ext4 /dev/sda3
+<span class="c1"># マウントする</span>
+sudo mount -t ext4 -o defaults /dev/sda3 /mnt
+<span class="c1"># 全データをコピーする</span>
+sudo rsync -ax --progress / /mnt
+<span class="c1"># インストール先パーティションのPARTUUIDを確認する</span>
+ls -l /dev/disk/by-partuuid/
+<span class="c1"># HDD上の/etc/fstabを開き/のPARTUUIDを先ほど確認したPARTUUIDに変更する</span>
+sudo vim /mnt/etc/fstab
+<span class="c1"># root=PARTUUID=の値を変更する</span>
+sudo vim /boot/cmdline.txt
+<span class="c1"># 再起動する</span>
+sudo reboot now
+<span class="c1"># 容量を見て起動ディスクが変更されていたらOK</span>
+df -h</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="セキュリティやログインの設定">セキュリティやログインの設定</h2>
 
 <p>sshのポート変更とかssh公開鍵認証とか</p>
@@ -238,9 +328,13 @@ HDDのみでブートまでしてしまう方法もあるようだが、今回�
           <a href="/tags/%E8%87%AA%E5%AE%85%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/">自宅サーバー</a>
           </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/post/rpi-mydns-letsencrypt/">
-            <span class="next-text nav-default">MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する</span>
+        <a class="prev" href="/post/rpi-mydns-setup/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Raspberry PiからMyDNSを使う</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/hugo-deploy/">
+            <span class="next-text nav-default">Hugoのデプロイ</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

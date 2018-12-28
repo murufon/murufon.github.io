@@ -6,7 +6,7 @@
     <description>Recent content in proxy on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Dec 2018 17:22:12 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 28 Dec 2018 17:49:25 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.kaio.ga/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>プロキシサーバー</title>
       <link>https://blog.kaio.ga/post/proxy-server/</link>
-      <pubDate>Fri, 28 Dec 2018 17:22:12 +0900</pubDate>
+      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
       <guid>https://blog.kaio.ga/post/proxy-server/</guid>
       <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
