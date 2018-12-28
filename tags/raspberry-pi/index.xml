@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry Pi on murufon&#39;s blog</title>
+    <link>https://blog.kaio.ga/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on murufon&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Dec 2018 17:49:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://blog.kaio.ga/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Raspberry Piのセットアップ(Raspbian)</title>
+      <link>https://blog.kaio.ga/post/rpi-raspbian-setup/</link>
+      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/post/rpi-raspbian-setup/</guid>
+      <description>murufonがRaspberry Pi 3 をセットアップした手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミ</description>
+    </item>
+    
+    <item>
+      <title>MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する</title>
+      <link>https://blog.kaio.ga/post/rpi-mydns-letsencrypt/</link>
+      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/post/rpi-mydns-letsencrypt/</guid>
+      <description>Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動かす - Qiita https://qiita.com/Brutus/items/27525deedb0eea1b35b8 上記サイトの通り。</description>
+    </item>
+    
+    <item>
+      <title>Raspberry PiからMyDNSを使う</title>
+      <link>https://blog.kaio.ga/post/rpi-mydns-setup/</link>
+      <pubDate>Fri, 28 Dec 2018 17:40:16 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/post/rpi-mydns-setup/</guid>
+      <description>基本的にMyDNSのサイト( https://www.mydns.jp/ )のHOW TO USEに沿ってます MyDNSでの事前準備 MyDNSに登録する HOW TO USEなどを見ながらDNSレコード</description>
+    </item>
+    
+    <item>
+      <title>プロキシサーバー</title>
+      <link>https://blog.kaio.ga/post/proxy-server/</link>
+      <pubDate>Fri, 28 Dec 2018 17:22:12 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/post/proxy-server/</guid>
+      <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
+    </item>
+    
+  </channel>
+</rss>

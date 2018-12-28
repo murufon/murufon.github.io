@@ -2,20 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on murufon&#39;s blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://blog.kaio.ga/categories/</link>
     <description>Recent content in Categories on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.kaio.ga/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hugo</title>
-      <link>http://localhost:1313/categories/hugo/</link>
+      <title>Hugo</title>
+      <link>https://blog.kaio.ga/categories/hugo/</link>
       <pubDate>Thu, 27 Dec 2018 00:20:37 +0900</pubDate>
       
-      <guid>http://localhost:1313/categories/hugo/</guid>
+      <guid>https://blog.kaio.ga/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://blog.kaio.ga/categories/raspberry-pi/</link>
+      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/categories/raspberry-pi/</guid>
       <description></description>
     </item>
     

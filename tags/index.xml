@@ -2,20 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on murufon&#39;s blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://blog.kaio.ga/tags/</link>
     <description>Recent content in Tags on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 27 Dec 2018 00:20:37 +0900</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.kaio.ga/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
+      <title>Hugo</title>
+      <link>https://blog.kaio.ga/tags/hugo/</link>
       <pubDate>Thu, 27 Dec 2018 00:20:37 +0900</pubDate>
       
-      <guid>http://localhost:1313/tags/hugo/</guid>
+      <guid>https://blog.kaio.ga/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>https://blog.kaio.ga/tags/raspberry-pi/</link>
+      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>letsencrypt</title>
+      <link>https://blog.kaio.ga/tags/letsencrypt/</link>
+      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/letsencrypt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mydns</title>
+      <link>https://blog.kaio.ga/tags/mydns/</link>
+      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/mydns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://blog.kaio.ga/tags/proxy/</link>
+      <pubDate>Fri, 28 Dec 2018 17:22:12 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自宅server</title>
+      <link>https://blog.kaio.ga/tags/%E8%87%AA%E5%AE%85server/</link>
+      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/%E8%87%AA%E5%AE%85server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>自宅サーバー</title>
+      <link>https://blog.kaio.ga/tags/%E8%87%AA%E5%AE%85%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/</link>
+      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/%E8%87%AA%E5%AE%85%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/</guid>
       <description></description>
     </item>
     
