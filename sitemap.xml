@@ -4,49 +4,49 @@
   
   <url>
     <loc>https://blog.kaio.ga/about/</loc>
-    <lastmod>2018-12-28T00:38:57+09:00</lastmod>
+    <lastmod>2018-12-28T13:24:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/proxy-server/</loc>
-    <lastmod>2018-12-28T17:49:25+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/rpi-mydns-letsencrypt/</loc>
-    <lastmod>2018-12-28T17:43:39+09:00</lastmod>
+    <lastmod>2018-12-29T02:58:32+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/rpi-mydns-setup/</loc>
-    <lastmod>2018-12-28T17:40:16+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/rpi-raspbian-setup/</loc>
-    <lastmod>2018-12-28T17:22:12+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/hugo-deploy/</loc>
-    <lastmod>2018-12-27T00:20:37+09:00</lastmod>
+    <lastmod>2018-12-28T18:11:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/hugo-customize/</loc>
-    <lastmod>2018-12-26T23:43:53+09:00</lastmod>
+    <lastmod>2018-12-28T18:11:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -59,90 +59,91 @@
   
   <url>
     <loc>https://blog.kaio.ga/tags/hugo/</loc>
-    <lastmod>2018-12-27T00:20:37+09:00</lastmod>
+    <lastmod>2018-12-28T18:11:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/hugo/</loc>
-    <lastmod>2018-12-27T00:20:37+09:00</lastmod>
+    <lastmod>2018-12-28T18:11:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/hugo-install/</loc>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/</loc>
-    <lastmod>2018-12-28T17:49:25+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/raspberry-pi/</loc>
-    <lastmod>2018-12-28T17:49:25+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/raspberry-pi/</loc>
-    <lastmod>2018-12-28T17:49:25+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/</loc>
-    <lastmod>2018-12-27T00:20:37+09:00</lastmod>
+    <lastmod>2018-12-28T18:11:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/letsencrypt/</loc>
-    <lastmod>2018-12-28T17:43:39+09:00</lastmod>
+    <lastmod>2018-12-29T02:58:32+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/</loc>
-    <lastmod>2018-12-28T00:38:57+09:00</lastmod>
+    <lastmod>2018-12-28T13:24:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/mydns/</loc>
-    <lastmod>2018-12-28T17:43:39+09:00</lastmod>
+    <lastmod>2018-12-29T02:58:32+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/proxy/</loc>
-    <lastmod>2018-12-28T17:49:25+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/%E8%87%AA%E5%AE%85server/</loc>
-    <lastmod>2018-12-28T17:49:25+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/%E8%87%AA%E5%AE%85%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/</loc>
-    <lastmod>2018-12-28T17:22:12+09:00</lastmod>
+    <lastmod>2018-12-29T02:02:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
