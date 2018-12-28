@@ -143,7 +143,8 @@
 <li>
 <ul>
 <li><a href="#nginx-で-php-を使う設定">Nginx で PHP を使う設定</a></li>
-<li><a href="#証明書の取得">証明書の取得</a>
+<li><a href="#証明書の取得">証明書の取得</a></li>
+<li><a href="#証明書を自動更新するための設定">証明書を自動更新するための設定</a>
 <ul>
 <li><a href="#cronに登録">cronに登録</a></li>
 </ul></li>
@@ -178,7 +179,7 @@
 </div>
 <p>READMEにしたがってMyDNSのアカウントの設定等をファイルに書き込む</p>
 
-<p>READMEのコマンドの該当箇所を変更したら僕の環境では以下のようになった</p>
+<p>READMEのコマンドの該当箇所を変更したら自分の環境では以下のようになった</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
@@ -226,8 +227,9 @@
    <span class="s2">&#34;certbot-auto renew&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>## 証明書を自動更新するための設定<br />
- <code>certbot_renew.sh</code>を作成</p>
+<h2 id="証明書を自動更新するための設定">証明書を自動更新するための設定</h2>
+
+<p><code>certbot_renew.sh</code>を作成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
