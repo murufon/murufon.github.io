@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="murufon" /><meta name="description" content="Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動かす - Qiita https://qiita.com/Brutus/items/27525deedb0eea1b35b8 上記サイトの通り。" /><meta name="keywords" content="murufon, programming, blog" />
+<meta name="author" content="murufon" /><meta name="description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か" /><meta name="keywords" content="murufon, programming, blog" />
 
 
 
@@ -39,25 +39,25 @@
 
 
 <meta property="og:title" content="MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する" />
-<meta property="og:description" content="Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動かす - Qiita https://qiita.com/Brutus/items/27525deedb0eea1b35b8 上記サイトの通り。" />
+<meta property="og:description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.kaio.ga/post/rpi-mydns-letsencrypt/" /><meta property="article:published_time" content="2018-12-28T17:43:39&#43;09:00"/>
 <meta property="article:modified_time" content="2018-12-29T02:58:32&#43;09:00"/>
 
 <meta itemprop="name" content="MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する">
-<meta itemprop="description" content="Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動かす - Qiita https://qiita.com/Brutus/items/27525deedb0eea1b35b8 上記サイトの通り。">
+<meta itemprop="description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か">
 
 
 <meta itemprop="datePublished" content="2018-12-28T17:43:39&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-29T02:58:32&#43;09:00" />
-<meta itemprop="wordCount" content="679">
+<meta itemprop="wordCount" content="746">
 
 
 
 <meta itemprop="keywords" content="Raspberry Pi,自宅server,letsencrypt,mydns," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する"/>
-<meta name="twitter:description" content="Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動かす - Qiita https://qiita.com/Brutus/items/27525deedb0eea1b35b8 上記サイトの通り。"/>
+<meta name="twitter:description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -142,6 +142,7 @@
 <ul>
 <li>
 <ul>
+<li><a href="#nginx-のインストール">Nginx のインストール</a></li>
 <li><a href="#nginx-で-php-を使う設定">Nginx で PHP を使う設定</a></li>
 <li><a href="#証明書の取得">証明書の取得</a></li>
 <li><a href="#証明書を自動更新するための設定">証明書を自動更新するための設定</a>
@@ -156,6 +157,15 @@
     <div class="post-content">
       
 
+<h2 id="nginx-のインストール">Nginx のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install nginx</code></pre></td></tr></table>
+</div>
+</div>
 <h2 id="nginx-で-php-を使う設定">Nginx で PHP を使う設定</h2>
 
 <p>これやらないとMyDNSのリポジトリでの証明書取得はできなさそう</p>
@@ -166,8 +176,6 @@
 
 <h2 id="証明書の取得">証明書の取得</h2>
 
-<p>MyDNS公式リポジトリ( <a href="https://github.com/disco-v8/DirectEdit/">https://github.com/disco-v8/DirectEdit/</a> )のREADMEを参照</p>
-
 <p>ワイルドカードの証明書を取得するにはcertbotの0.22以上が必要らしいが、現時点では<code>apt-get install</code>でバージョン0.10.2までしかはいらなかったのでGitから取ってくる</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -177,9 +185,44 @@
 <pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/certbot/certbot.git ~/certbot</code></pre></td></tr></table>
 </div>
 </div>
-<p>READMEにしたがってMyDNSのアカウントの設定等をファイルに書き込む</p>
+<p>MyDNS公式リポジトリ( <a href="https://github.com/disco-v8/DirectEdit/">https://github.com/disco-v8/DirectEdit/</a> )のREADMEを参照</p>
 
-<p>READMEのコマンドの該当箇所を変更したら自分の環境では以下のようになった</p>
+<p>STEP1:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /var/www/html/
+wget <span class="s1">&#39;https://github.com/disco-v8/DirectEdit/archive/master.zip&#39;</span> -O DirectEdit-master.zip
+unzip ./DirectEdit-master.zip
+<span class="nb">cd</span> /var/www/html/DirectEdit-master/
+chmod <span class="m">700</span> ./*.php
+chmod <span class="m">600</span> ./*.conf</code></pre></td></tr></table>
+</div>
+</div>
+<p>STEP2:<br />
+READMEにしたがってMyDNSのアカウントの設定等をファイルに書き込む<br />
+<code>txtedit.conf</code>を編集する</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">    <span class="nv">$MYDNSJP_MASTERID</span>  <span class="o">=</span> <span class="s1">&#39;yourmasterid&#39;</span><span class="p">;</span>
+    <span class="nv">$MYDNSJP_MASTERPWD</span> <span class="o">=</span> <span class="s1">&#39;yourpasswd&#39;</span><span class="p">;</span>
+    <span class="nv">$MYDNSJP_DOMAIN</span> <span class="o">=</span> <span class="s1">&#39;yourdomain&#39;</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>STEP3:<br />
+READMEのコマンドの該当箇所を変更したら自分の環境では以下のようになった</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
