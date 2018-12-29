@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>プロキシサーバー - murufon&#39;s blog</title>
+  <title>ニューラルネットワークと深層学習のお勉強(2) - murufon&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="murufon" /><meta name="description" content="プロキシサーバーの設定 自宅のraspberrypiにMyDNS&#43;Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが" /><meta name="keywords" content="murufon, programming, blog" />
+<meta name="author" content="murufon" /><meta name="description" content="逆伝播 コスト関数の勾配を高速に計算するアルゴリズム 逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微" /><meta name="keywords" content="murufon, programming, blog" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.53 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://blog.kaio.ga/post/proxy-server/" />
+<link rel="canonical" href="https://blog.kaio.ga/post/neural2/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,26 +38,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="プロキシサーバー" />
-<meta property="og:description" content="プロキシサーバーの設定 自宅のraspberrypiにMyDNS&#43;Let&rsquo;sEncryptでhttps対応のサーバーを立てましたが" />
+<meta property="og:title" content="ニューラルネットワークと深層学習のお勉強(2)" />
+<meta property="og:description" content="逆伝播 コスト関数の勾配を高速に計算するアルゴリズム 逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.kaio.ga/post/proxy-server/" /><meta property="article:published_time" content="2018-12-28T17:49:25&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-29T02:02:58&#43;09:00"/>
+<meta property="og:url" content="https://blog.kaio.ga/post/neural2/" /><meta property="article:published_time" content="2018-12-30T00:32:14&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-30T00:32:14&#43;09:00"/>
 
-<meta itemprop="name" content="プロキシサーバー">
-<meta itemprop="description" content="プロキシサーバーの設定 自宅のraspberrypiにMyDNS&#43;Let&rsquo;sEncryptでhttps対応のサーバーを立てましたが">
-
-
-<meta itemprop="datePublished" content="2018-12-28T17:49:25&#43;09:00" />
-<meta itemprop="dateModified" content="2018-12-29T02:02:58&#43;09:00" />
-<meta itemprop="wordCount" content="296">
+<meta itemprop="name" content="ニューラルネットワークと深層学習のお勉強(2)">
+<meta itemprop="description" content="逆伝播 コスト関数の勾配を高速に計算するアルゴリズム 逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微">
 
 
+<meta itemprop="datePublished" content="2018-12-30T00:32:14&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-30T00:32:14&#43;09:00" />
+<meta itemprop="wordCount" content="630">
 
-<meta itemprop="keywords" content="proxy,自宅server,Raspberry Pi," />
+
+
+<meta itemprop="keywords" content="Neural Network,機械学習,Python3," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="プロキシサーバー"/>
-<meta name="twitter:description" content="プロキシサーバーの設定 自宅のraspberrypiにMyDNS&#43;Let&rsquo;sEncryptでhttps対応のサーバーを立てましたが"/>
+<meta name="twitter:title" content="ニューラルネットワークと深層学習のお勉強(2)"/>
+<meta name="twitter:description" content="逆伝播 コスト関数の勾配を高速に計算するアルゴリズム 逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,12 +124,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">プロキシサーバー</h1>
+      <h1 class="post-title">ニューラルネットワークと深層学習のお勉強(2)</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2018-12-28 </span>
+        <span class="post-time"> 2018-12-30 </span>
         <div class="post-category">
-            <a href="/categories/raspberry-pi/"> Raspberry Pi </a>
+            <a href="/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/"> 機械学習 </a>
+            <a href="/categories/python3/"> Python3 </a>
             </div>
         
       </div>
@@ -140,8 +141,11 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#プロキシサーバーの設定">プロキシサーバーの設定</a></li>
-<li><a href="#プロキシサーバーを探す">プロキシサーバーを探す</a></li>
+<li>
+<ul>
+<li><a href="#逆伝播">逆伝播</a></li>
+<li><a href="#表記方法">表記方法</a></li>
+</ul></li>
 </ul>
 </nav>
   </div>
@@ -149,17 +153,39 @@
     <div class="post-content">
       
 
-<h1 id="プロキシサーバーの設定">プロキシサーバーの設定</h1>
+<h2 id="逆伝播">逆伝播</h2>
 
-<p>自宅のraspberrypiにMyDNS+Let&rsquo;sEncryptでhttps対応のサーバーを立てましたが、自宅からはMyDNSで登録したドメインでraspberrypiにアクセスできずテストの際困りました。<br />
-そこでプロキシサーバーを経由することで自宅のネットワーク内からでも外部からと同じように登録したドメインからraspberrypiにアクセスできるようにしました。<br />
-そのときのメモ。</p>
+<p>コスト関数の勾配を高速に計算するアルゴリズム</p>
 
-<h1 id="プロキシサーバーを探す">プロキシサーバーを探す</h1>
+<p>逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微分$\frac{\partial C}{\partial w}$もしくは$\frac{\partial C}{\partial b}$。<br />
+重みとバイアスを変化させた時のコスト関数の変化の度合いがわかる。<br />
+逆伝播は単なる高速な学習アルゴリズムではなく、逆伝播を見ることで重みやバイアスを変化させた時のニューラルネットワーク全体の挙動の変化に関して深い洞察が得られる。<br />
+わざわざ時間をかけて理解する価値はそこにある。<br />
+逆伝播について深く理解しなくともブラックボックスとして扱うことはできる。</p>
 
-<p>フリーのプロキシサーバーを探すには以下のサイトが有名みたいです。<br />
-CyberSyndrome - The Proxy Search Engine ( <a href="http://www.cybersyndrome.net/">http://www.cybersyndrome.net/</a> )<br />
-例えば日本のプロキシサーバーを探したかったらJPで検索すればOKです。</p>
+<h2 id="表記方法">表記方法</h2>
+
+<p>$ w ^ l_{jk}$で$(l-1)$番目の層の$k$番目のニューロンから$l$番目の層の$j$番目のニューロンへの接続に対する重みを表している。<br />
+$j$と$k$の順番に注意。</p>
+
+<p>$ b ^ l _ j $で$l$番目の層の$j$番目のニューロンのバイアスを表す。<br />
+$ a ^ l _ j $で$l$番目の層の$j$番目のニューロンの活性を表す。</p>
+
+<p>各層$l$に対し重み行列$w ^ l$。$l$番目の層のニューロンを終点とする接続の重み。<br />
+各層$l$に対しバイアスベクトル$b ^ l$。<br />
+各層$l$に対し活性ベクトル$a ^ l$。</p>
+
+<p>これらを用いてニューロンの活性化は次式のようにコンパクトに表せる</p>
+
+<p>$$<br />
+a ^ l = σ ( w ^ l a ^ {l - 1} + b ^ l )<br />
+$$</p>
+
+<p>ここで$σ$の引数を重み付き入力$z ^ l$と呼ぶことにする</p>
+
+<p>$$<br />
+z ^ l \equiv w ^ l a ^ {l - 1} + b ^ l<br />
+$$</p>
 
     </div>
 
@@ -170,24 +196,20 @@ CyberSyndrome - The Proxy Search Engine ( <a href="http://www.cybersyndrome.net/
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-12-29</span>
+    <span class="item-content">2018-12-30</span>
   </p>
   
   
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/proxy/">proxy</a>
-          <a href="/tags/%E8%87%AA%E5%AE%85server/">自宅server</a>
-          <a href="/tags/raspberry-pi/">Raspberry Pi</a>
+          <a href="/tags/neural-network/">Neural Network</a>
+          <a href="/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/">機械学習</a>
+          <a href="/tags/python3/">Python3</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/python-contour/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Python3でコンター図を描く</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/rpi-mydns-letsencrypt/">
-            <span class="next-text nav-default">MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する</span>
+        
+        <a class="next" href="/post/neural1/">
+            <span class="next-text nav-default">ニューラルネットワークと深層学習のお勉強(1)</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

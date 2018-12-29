@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ニューラルネットワークと深層学習のお勉強(1) - murufon&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="murufon" /><meta name="description" content="「ニューラルネットワークと深層学習( http://nnadl-ja.github.io/nnadl_site_ja/index.html )」を読んで勉強したことを書いていこうと思います。 これは自分の脳内整理用のメモであるため、内容が端折ら" /><meta name="keywords" content="murufon, programming, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://blog.kaio.ga/post/neural1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.3501ea5e.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="ニューラルネットワークと深層学習のお勉強(1)" />
+<meta property="og:description" content="「ニューラルネットワークと深層学習( http://nnadl-ja.github.io/nnadl_site_ja/index.html )」を読んで勉強したことを書いていこうと思います。 これは自分の脳内整理用のメモであるため、内容が端折ら" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.kaio.ga/post/neural1/" /><meta property="article:published_time" content="2018-12-30T00:32:08&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-30T00:32:08&#43;09:00"/>
+
+<meta itemprop="name" content="ニューラルネットワークと深層学習のお勉強(1)">
+<meta itemprop="description" content="「ニューラルネットワークと深層学習( http://nnadl-ja.github.io/nnadl_site_ja/index.html )」を読んで勉強したことを書いていこうと思います。 これは自分の脳内整理用のメモであるため、内容が端折ら">
+
+
+<meta itemprop="datePublished" content="2018-12-30T00:32:08&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-30T00:32:08&#43;09:00" />
+<meta itemprop="wordCount" content="1186">
+
+
+
+<meta itemprop="keywords" content="Neural Network,機械学習,Python3," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ニューラルネットワークと深層学習のお勉強(1)"/>
+<meta name="twitter:description" content="「ニューラルネットワークと深層学習( http://nnadl-ja.github.io/nnadl_site_ja/index.html )」を読んで勉強したことを書いていこうと思います。 これは自分の脳内整理用のメモであるため、内容が端折ら"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">murufon&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">murufon&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">ニューラルネットワークと深層学習のお勉強(1)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-12-30 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/"> 機械学習 </a>
+            <a href="/categories/python3/"> Python3 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#パーセプトロン">パーセプトロン</a></li>
+<li><a href="#シグモイドニュートロン">シグモイドニュートロン</a></li>
+<li><a href="#exercises">Exercises</a>
+<ul>
+<li><a href="#1">(1)</a></li>
+<li><a href="#2">(2)</a></li>
+</ul></li>
+<li><a href="#ニューラルネットワークのアーキテクチャ">ニューラルネットワークのアーキテクチャ</a>
+<ul>
+<li><a href="#再帰型ニューラルネットワーク">再帰型ニューラルネットワーク</a></li>
+<li><a href="#フィードフォワードニューラルネットワーク">フィードフォワードニューラルネットワーク</a></li>
+</ul></li>
+<li><a href="#エクササイズ">エクササイズ</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>「ニューラルネットワークと深層学習( <a href="http://nnadl-ja.github.io/nnadl_site_ja/index.html">http://nnadl-ja.github.io/nnadl_site_ja/index.html</a> )」を読んで勉強したことを書いていこうと思います。<br />
+これは自分の脳内整理用のメモであるため、内容が端折られたり抜けてたりしています。学習する際はすばらしき原文を読まれることをお勧めいたします。</p>
+
+<h2 id="パーセプトロン">パーセプトロン</h2>
+
+<p>今日ではパーセプトロン以外の人口ニューロンモデル(多くはシグモイドニューロン？)を使うことが一般的だが、シグモイドニューロンを理解するにはパーセプトロンを理解することが大事である。</p>
+
+<p>パーセプトロンは複数の入力を取る。入力は1または0。<br />
+出力は1つで、1または0。<br />
+入力ベクトル$x$、重みベクトル$w$、バイアス$b$があって</p>
+
+<p>$$<br />
+\mathrm{output} =<br />
+\left\{<br />
+\begin{array}{}<br />
+0 &amp; \mathrm{ if } \; w \cdot x + b \leq 0 \\<br />
+1 &amp;  \mathrm{ if } \; w \cdot x + b \gt 0<br />
+\end{array}<br />
+\right.<br />
+$$</p>
+
+<p>パーセプトロンを層にわけて判断させると複雑なものや抽象的なものも判定できる。パーセプトロン1つでNANDと同値の挙動をさせることができるので任意の論理関数を計算できる。</p>
+
+<h2 id="シグモイドニュートロン">シグモイドニュートロン</h2>
+
+<p>パーセプトロンのネットワークでは微小な入力変化で大きな出力の変化が生まれてしまう。これを解決したのがシグモイドニューロン。出力は$\sigma ( w \cdot x  + b )$。$ \sigma $はシグモイド関数(もしくはロジスティック関数)と呼ばれている。</p>
+
+<p>$$<br />
+σ ( z ) \equiv \frac { 1 } { 1 + e ^ { - z } }<br />
+$$</p>
+
+<h2 id="exercises">Exercises</h2>
+
+<h3 id="1">(1)</h3>
+
+<p>$$<br />
+\mathrm{output} =<br />
+\left\{<br />
+\begin{array}{}<br />
+0 &amp; \mathrm{ if } \;w \cdot x + b \leq 0 \\<br />
+1 &amp;  \mathrm{ if } \;w \cdot x + b \gt 0<br />
+\end{array}<br />
+\right.<br />
+$$<br />
+の$w$と$b$を定数倍しても不等号の向きは変化しないのでネットワークの振る舞いは変わらない</p>
+
+<h3 id="2">(2)</h3>
+
+<p>$$<br />
+c \rightarrow \infty<br />
+$$<br />
+であっても(1)と同様に不等号の向きは変わらない。<br />
+$$<br />
+c \rightarrow \infty<br />
+$$<br />
+のとき<br />
+$$<br />
+\mathrm{output} =<br />
+\left\{<br />
+\begin{array}{l}<br />
+z \rightarrow \infty &amp; (z \gt 0) \\<br />
+z \rightarrow -\infty &amp; (z \lt 0)<br />
+\end{array}<br />
+\right.<br />
+$$<br />
+よって<br />
+$$<br />
+\mathrm{output} =<br />
+\left\{<br />
+\begin{array}{l}<br />
+σ \rightarrow 1 &amp; (z \gt 0) \\<br />
+σ \rightarrow 0 &amp; (z \lt 0)<br />
+\end{array}<br />
+\right.<br />
+$$<br />
+また、$z=0$となるパーセプトロンがあると$\sigma(z) = \frac{1}{2}$となりシグモイドニューロンのネットワークはパーセプトロンの場合と同じように振る舞うことはない</p>
+
+<h2 id="ニューラルネットワークのアーキテクチャ">ニューラルネットワークのアーキテクチャ</h2>
+
+<ul>
+<li>入力層<br />
+
+<ul>
+<li>入力ニューロン<br /></li>
+</ul></li>
+<li>出力層<br />
+
+<ul>
+<li>出力ニューロン<br /></li>
+</ul></li>
+<li>隠れ層<br />
+<br /></li>
+</ul>
+
+<h3 id="再帰型ニューラルネットワーク">再帰型ニューラルネットワーク</h3>
+
+<p>フィードバックループを持つ再帰型ニューラルネットワークというモデルもあるが、学習アルゴリズムが非力であったのが大きな理由で主流ではない。しかし、非常に興味深い。人間の脳の働き方に近い。</p>
+
+<h3 id="フィードフォワードニューラルネットワーク">フィードフォワードニューラルネットワーク</h3>
+
+<p>ネットワーク内にループがない。情報は常に前に伝わり、後ろには戻らない。<br />
+ループを許さないニューラルネットワーク<br />
+現在、より広く使われているニューラルネットワーク</p>
+
+<h2 id="エクササイズ">エクササイズ</h2>
+
+<p>$$<br />
+w_1  = c[0.50, 1.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00] \\<br />
+w_2 = c[0.00, 0.00, 0.33, 0.50, 0.50, 1.00, 0.00, 0.00, 0.00, 0.00] \\<br />
+w_3 = c[0.00, 0.00, 0.33, 0.50, 0.00, 0.00, 0.50, 1.00, 0.00, 0.00] \\<br />
+w_4 = c[0.50, 0.00, 0.33, 0.00, 0.50, 0.00, 0.50, 0.00, 1.00, 0.00] \\<br />
+b &gt; -0.99c<br />
+$$<br />
+\(c\)はとても大きな数字・・・？</p>
+
+<p>python3でやるときは↓のリポジトリで</p>
+
+<p><a href="https://github.com/MichalDanielDobrzanski/DeepLearningPython35">https://github.com/MichalDanielDobrzanski/DeepLearningPython35</a></p>
+
+<p>高度なアルゴリズム ≤ シンプルな学習アルゴリズム + 良い訓練データ</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">murufon</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-12-30</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/neural-network/">Neural Network</a>
+          <a href="/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/">機械学習</a>
+          <a href="/tags/python3/">Python3</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/neural2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">ニューラルネットワークと深層学習のお勉強(2)</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/python-contour/">
+            <span class="next-text nav-default">Python3でコンター図を描く</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:muruofon2@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/murufon" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/murufon" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.kaio.ga/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">murufon</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131272203-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
