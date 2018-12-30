@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-12-28T17:22:12&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-29T02:02:58&#43;09:00" />
-<meta itemprop="wordCount" content="1136">
+<meta itemprop="wordCount" content="1229">
 
 
 
@@ -197,7 +197,8 @@
 
 <h2 id="sdカードでの設定">SDカードでの設定</h2>
 
-<p>ラズベリーパイには従来のBIOSがないため、通常はBIOSを使用して設定および設定されるさまざまなシステム構成パラメータが「config.txt」というテキストファイルに保存される。<br />
+<p>基本的には何も設定しなくてOK<br />
+ラズベリーパイには従来のBIOSがないため、通常はBIOSを使用して設定および設定されるさまざまなシステム構成パラメータが「config.txt」というテキストファイルに保存される。<br />
 /boot/config.txtはARMコアが初期化される前にGPUによって読み取られる。<br />
 /boot/config.txtの説明↓<br />
 <a href="https://elinux.org/RPiconfig">https://elinux.org/RPiconfig</a></p>
@@ -239,7 +240,21 @@ static <span class="nv">domain_name_servers</span><span class="o">=</span><span 
 <p>Raspberry PiにDockerを入れる - Qiita<br />
 <a href="https://qiita.com/hisurga/items/7aca7484ac5bfd084294">https://qiita.com/hisurga/items/7aca7484ac5bfd084294</a></p>
 
-<p>Raspberry Pi用docker-composeの構築 - Qiita<br />
+<p>ラズパイ上でdocker-composeをビルドしてもよかったのですが時間がかかるのと面倒だったのとで<code>pip</code>でインストール</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install python-pip
+sudo pip install docker-compose
+docker -v</code></pre></td></tr></table>
+</div>
+</div>
+<p>(参考)<br />
+Raspberry Pi用docker-composeの構築 - Qiita<br />
 <a href="https://qiita.com/tkyonezu/items/ceaaf41924df39254058">https://qiita.com/tkyonezu/items/ceaaf41924df39254058</a></p>
 
 <p>(参考)<br />

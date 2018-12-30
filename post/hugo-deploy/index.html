@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-12-27T00:20:37&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-28T18:11:58&#43;09:00" />
-<meta itemprop="wordCount" content="1733">
+<meta itemprop="wordCount" content="1818">
 
 
 
@@ -303,10 +303,16 @@ github pagesはルートのCNAMEを見て独自ドメインの設定を判断し
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
+<span class="nv">month</span><span class="o">=</span><span class="k">$(</span>date <span class="s2">&#34;+%m&#34;</span><span class="k">)</span>
+<span class="nv">year</span><span class="o">=</span><span class="k">$(</span>date <span class="s2">&#34;+%Y&#34;</span><span class="k">)</span>
+
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
   <span class="c1"># $ ./new.sh atricleName</span>
   <span class="nv">articlename</span><span class="o">=</span><span class="nv">$1</span>
@@ -314,14 +320,15 @@ github pagesはルートのCNAMEを見て独自ドメインの設定を判断し
   <span class="c1"># $ ./new.sh</span>
   <span class="nb">read</span> -p <span class="s1">&#39;Please input article name: &#39;</span> articlename
 <span class="k">fi</span>
-hugo new post/<span class="nv">$articlename</span>.md
+hugo new post/<span class="si">${</span><span class="nv">year</span><span class="si">}</span>/<span class="si">${</span><span class="nv">month</span><span class="si">}</span>/<span class="si">${</span><span class="nv">articlename</span><span class="si">}</span>.md
 
 <span class="c1"># open this project wiht Atom</span>
-atom ./ <span class="o">&amp;&amp;</span> atom ./content/post/<span class="nv">$articlename</span></code></pre></td></tr></table>
+atom ./ <span class="o">&amp;&amp;</span> atom ./content/post/<span class="si">${</span><span class="nv">year</span><span class="si">}</span>/<span class="si">${</span><span class="nv">month</span><span class="si">}</span>/<span class="si">${</span><span class="nv">articlename</span><span class="si">}</span>.md</code></pre></td></tr></table>
 </div>
 </div>
 <p><code>./new.sh &lt;ARTICLE NAME&gt;</code>と叩くと新しくファイルを作ってくれます<br />
 <code>./new.sh</code>と叩くと記事名を聞いてファイル作ってくれます<br />
+URLは<code>/post/{year}/{month}/{articlename}/</code>です。例えば<code>/post/2018/12/helloworld/</code>のようになります<br />
 ファイル作った後Atomで開いてくれます<br />
 <code>atom</code>コマンドをインストールしていない場合はMacの場合はAtomのメニューのAtom→Install Shell Commandsからインストール</p>
 
