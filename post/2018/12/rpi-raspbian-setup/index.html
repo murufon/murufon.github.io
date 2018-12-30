@@ -42,14 +42,14 @@
 <meta property="og:description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.kaio.ga/post/2018/12/rpi-raspbian-setup/" /><meta property="article:published_time" content="2018-12-28T17:22:12&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-28T17:22:12&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-30T15:00:37&#43;09:00"/>
 
 <meta itemprop="name" content="Raspberry Piのセットアップ(Raspbian)">
 <meta itemprop="description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード">
 
 
 <meta itemprop="datePublished" content="2018-12-28T17:22:12&#43;09:00" />
-<meta itemprop="dateModified" content="2018-12-28T17:22:12&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-30T15:00:37&#43;09:00" />
 <meta itemprop="wordCount" content="1229">
 
 
@@ -166,14 +166,14 @@
 <h2 id="raspbianのインストール">Raspbianのインストール</h2>
 
 <p>raspbian日本のミラーサイト - Qiita<br />
-<a href="https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8">https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8</a></p>
+<a href="https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8" target="_blank">https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8</a></p>
 
-<p>SDカードへの書き込みはEtcher <a href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></p>
+<p>SDカードへの書き込みはEtcher <a href="https://www.balena.io/etcher/" target="_blank">https://www.balena.io/etcher/</a></p>
 
 <h2 id="初期設定">初期設定</h2>
 
 <p>Raspberry Piをディスプレイ・キーボード・マウス無しの三重苦でもセットアップする方法 - karaage. [からあげ]<br />
-<a href="http://karaage.hatenadiary.jp/entry/2015/07/15/080000">http://karaage.hatenadiary.jp/entry/2015/07/15/080000</a></p>
+<a href="http://karaage.hatenadiary.jp/entry/2015/07/15/080000" target="_blank">http://karaage.hatenadiary.jp/entry/2015/07/15/080000</a></p>
 
 <p>ちなみに、↑のサイトではネットワーク内のIPアドレスを一覧表示させる方法でやっているが、Raspberry Piには初めからホスト名が設定されているので、IPアドレスを調べなくてもssh接続できる場合がある</p>
 <div class="highlight"><div class="chroma">
@@ -201,17 +201,17 @@
 ラズベリーパイには従来のBIOSがないため、通常はBIOSを使用して設定および設定されるさまざまなシステム構成パラメータが「config.txt」というテキストファイルに保存される。<br />
 /boot/config.txtはARMコアが初期化される前にGPUによって読み取られる。<br />
 /boot/config.txtの説明↓<br />
-<a href="https://elinux.org/RPiconfig">https://elinux.org/RPiconfig</a></p>
+<a href="https://elinux.org/RPiconfig" target="_blank">https://elinux.org/RPiconfig</a></p>
 
 <h2 id="外部から接続するための設定">外部から接続するための設定</h2>
 
 <h3 id="ipアドレスの固定">ipアドレスの固定</h3>
 
 <p>固定IPアドレスの設定（Wi-Fi（無線LAN）の場合）<br />
-<a href="http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html">http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html</a></p>
+<a href="http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html" target="_blank">http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html</a></p>
 
 <p>固定IPアドレスの設定（有線LANの場合）<br />
-<a href="https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html">https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html</a></p>
+<a href="https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html" target="_blank">https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html</a></p>
 
 <p>今回は以下のように設定しました</p>
 <div class="highlight"><div class="chroma">
@@ -233,12 +233,12 @@ static <span class="nv">domain_name_servers</span><span class="o">=</span><span 
 <h3 id="ポートの開放">ポートの開放</h3>
 
 <p>RT-500KI ポート開放設定の説明<br />
-<a href="https://www.akakagemaru.info/port/rt500ki-portfw.html">https://www.akakagemaru.info/port/rt500ki-portfw.html</a></p>
+<a href="https://www.akakagemaru.info/port/rt500ki-portfw.html" target="_blank">https://www.akakagemaru.info/port/rt500ki-portfw.html</a></p>
 
 <h2 id="dockerとdocker-composeの導入">Dockerとdocker-composeの導入</h2>
 
 <p>Raspberry PiにDockerを入れる - Qiita<br />
-<a href="https://qiita.com/hisurga/items/7aca7484ac5bfd084294">https://qiita.com/hisurga/items/7aca7484ac5bfd084294</a></p>
+<a href="https://qiita.com/hisurga/items/7aca7484ac5bfd084294" target="_blank">https://qiita.com/hisurga/items/7aca7484ac5bfd084294</a></p>
 
 <p>ラズパイ上でdocker-composeをビルドしてもよかったのですが時間がかかるのと面倒だったのとで<code>pip</code>でインストール</p>
 <div class="highlight"><div class="chroma">
@@ -255,11 +255,11 @@ docker -v</code></pre></td></tr></table>
 </div>
 <p>(参考)<br />
 Raspberry Pi用docker-composeの構築 - Qiita<br />
-<a href="https://qiita.com/tkyonezu/items/ceaaf41924df39254058">https://qiita.com/tkyonezu/items/ceaaf41924df39254058</a></p>
+<a href="https://qiita.com/tkyonezu/items/ceaaf41924df39254058" target="_blank">https://qiita.com/tkyonezu/items/ceaaf41924df39254058</a></p>
 
 <p>(参考)<br />
 Raspberry PiにDocker ComposeでownCloudを導入する - さやかちゃんドットネット<br />
-<a href="http://shira.hatenadiary.jp/entry/2018/05/14/145228">http://shira.hatenadiary.jp/entry/2018/05/14/145228</a></p>
+<a href="http://shira.hatenadiary.jp/entry/2018/05/14/145228" target="_blank">http://shira.hatenadiary.jp/entry/2018/05/14/145228</a></p>
 
 <h2 id="usbから外付けhddで起動させる">USBから外付けHDDで起動させる</h2>
 
@@ -268,7 +268,7 @@ HDDのみでブートまでしてしまう方法もあるようだが、今回�
 
 <p>(参考)<br />
 Raspberry PiをUSB(HDD)で起動させる<br />
-<a href="https://jyn.jp/raspberrypi-usb-boot/">https://jyn.jp/raspberrypi-usb-boot/</a></p>
+<a href="https://jyn.jp/raspberrypi-usb-boot/" target="_blank">https://jyn.jp/raspberrypi-usb-boot/</a></p>
 
 <p><code>/dev/sda3</code>は各自読み替えてください</p>
 <div class="highlight"><div class="chroma">
@@ -322,7 +322,7 @@ df -h</code></pre></td></tr></table>
 <p>sshのポート変更とかssh公開鍵認証とか</p>
 
 <p>ラズパイの最低限のセキュリティー設定 | Feijoa.jp<br />
-<a href="http://www.feijoa.jp/laboratory/raspberrypi/minimumSecurity/">http://www.feijoa.jp/laboratory/raspberrypi/minimumSecurity/</a></p>
+<a href="http://www.feijoa.jp/laboratory/raspberrypi/minimumSecurity/" target="_blank">http://www.feijoa.jp/laboratory/raspberrypi/minimumSecurity/</a></p>
 
     </div>
 
@@ -333,7 +333,7 @@ df -h</code></pre></td></tr></table>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-12-28</span>
+    <span class="item-content">2018-12-30</span>
   </p>
   
   

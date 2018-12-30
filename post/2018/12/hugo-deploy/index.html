@@ -42,14 +42,14 @@
 <meta property="og:description" content="GitHub Pagesを使って作ったサイトを公開してみたいと思います リポジトリ名や公開するフォルダによっていくつかやり方がありますが、独自ドメインにす" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.kaio.ga/post/2018/12/hugo-deploy/" /><meta property="article:published_time" content="2018-12-27T00:20:37&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-27T00:20:37&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-30T15:00:37&#43;09:00"/>
 
 <meta itemprop="name" content="Hugoのデプロイ">
 <meta itemprop="description" content="GitHub Pagesを使って作ったサイトを公開してみたいと思います リポジトリ名や公開するフォルダによっていくつかやり方がありますが、独自ドメインにす">
 
 
 <meta itemprop="datePublished" content="2018-12-27T00:20:37&#43;09:00" />
-<meta itemprop="dateModified" content="2018-12-27T00:20:37&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-30T15:00:37&#43;09:00" />
 <meta itemprop="wordCount" content="1818">
 
 
@@ -140,6 +140,8 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#github-pagesに公開する">GitHub Pagesに公開する</a></li>
 <li><a href="#デプロイのスクリプト化">デプロイのスクリプト化</a></li>
 <li><a href="#独自ドメインの設定">独自ドメインの設定</a>
@@ -148,6 +150,7 @@
 <li><a href="#github側の設定">GitHub側の設定</a></li>
 </ul></li>
 <li><a href="#記事作成のスクリプト化">記事作成のスクリプト化</a></li>
+</ul></li>
 </ul>
 </nav>
   </div>
@@ -161,10 +164,10 @@
 User Pagesは<code>https://&lt;USERNAME&gt;.github.io</code>というURLでアクセスできるようにするやり方で、ドメインと同名のリポジトリを作成する必要があります</p>
 
 <p>Hugo公式がわかりやすくやり方を書いてくれているのでそれに沿ってやってみます<br />
-<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a><br />
+<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a><br />
 リポジトリ名などは適宜読み替えてください</p>
 
-<h1 id="github-pagesに公開する">GitHub Pagesに公開する</h1>
+<h2 id="github-pagesに公開する">GitHub Pagesに公開する</h2>
 
 <ul>
 <li>hugoのプロジェクト用のリポジトリを作成します。ここでは<code>hugo-blog</code>としました。このhugoのファイル一式をこのリポジトリにいれておきます<br /></li>
@@ -193,7 +196,7 @@ User Pagesは<code>https://&lt;USERNAME&gt;.github.io</code>というURLでア�
 <pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://murufon.github.io/&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
-<h1 id="デプロイのスクリプト化">デプロイのスクリプト化</h1>
+<h2 id="デプロイのスクリプト化">デプロイのスクリプト化</h2>
 
 <p>基本は公式ドキュメントにあるスクリプトのままです<br />
 <code>hugo-blog</code>をcommit/pushするコードを加えました<br />
@@ -269,21 +272,21 @@ git push origin master</code></pre></td></tr></table>
 実際にデプロイしてみて<code>https://&lt;USERNAME&gt;.github.io/</code>にアクセスしてみて正しく表示されれば成功<br />
 pushしてから反映まで少し時間がかかる場合があるので注意</p>
 
-<h1 id="独自ドメインの設定">独自ドメインの設定</h1>
+<h2 id="独自ドメインの設定">独自ドメインの設定</h2>
 
-<h2 id="dns設定をする">DNS設定をする</h2>
+<h3 id="dns設定をする">DNS設定をする</h3>
 
 <p>サービスによって設定方法は違うので各マニュアルを参照<br />
 <code>blog.kaio.ga CNAME murufon.github.io</code></p>
 
-<h2 id="github側の設定">GitHub側の設定</h2>
+<h3 id="github側の設定">GitHub側の設定</h3>
 
 <p><code>static/</code>に<code>CNAME</code>という名前のテキストファイルを作成する(拡張子なし)。中身は設定したいカスタムドメインのみ<br />
 hugoでビルドすると公開サイトのリポジトリのルートにCNAMEが置かれる<br />
 github pagesはルートのCNAMEを見て独自ドメインの設定を判断しているらしい<br />
 これをpushしてしばらくすると<code>murufon.github.io</code>リポジトリのSettings→GitHub Pages→Enforce HTTPSが設定可能になるので設定しておく</p>
 
-<h1 id="記事作成のスクリプト化">記事作成のスクリプト化</h1>
+<h2 id="記事作成のスクリプト化">記事作成のスクリプト化</h2>
 
 <p>どうせなら新規記事作成もスクリプトにまとめます<br />
 自分はAtomエディターを使っているので作成したファイルをAtomで開くところまで自動化してみました<br />
@@ -341,7 +344,7 @@ URLは<code>/post/{year}/{month}/{articlename}/</code>です。例えば<code>/p
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-12-27</span>
+    <span class="item-content">2018-12-30</span>
   </p>
   
   

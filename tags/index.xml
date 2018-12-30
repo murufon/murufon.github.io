@@ -57,6 +57,24 @@
     </item>
     
     <item>
+      <title>Syntax Highlighting</title>
+      <link>https://blog.kaio.ga/tags/syntax-highlighting/</link>
+      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/syntax-highlighting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme preview</title>
+      <link>https://blog.kaio.ga/tags/theme-preview/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/theme-preview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>letsencrypt</title>
       <link>https://blog.kaio.ga/tags/letsencrypt/</link>
       <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
@@ -75,11 +93,47 @@
     </item>
     
     <item>
+      <title>preview</title>
+      <link>https://blog.kaio.ga/tags/preview/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/preview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>proxy</title>
       <link>https://blog.kaio.ga/tags/proxy/</link>
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
       <guid>https://blog.kaio.ga/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcodes</title>
+      <link>https://blog.kaio.ga/tags/shortcodes/</link>
+      <pubDate>Tue, 30 Aug 2016 16:01:23 +0800</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-3</title>
+      <link>https://blog.kaio.ga/tags/tag-3/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/tag-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-5</title>
+      <link>https://blog.kaio.ga/tags/tag-5/</link>
+      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
+      
+      <guid>https://blog.kaio.ga/tags/tag-5/</guid>
       <description></description>
     </item>
     
