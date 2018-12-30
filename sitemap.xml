@@ -4,14 +4,14 @@
   
   <url>
     <loc>https://blog.kaio.ga/demo/even-preview/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/about/</loc>
-    <lastmod>2018-12-28T13:24:52+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39,7 +39,7 @@
   
   <url>
     <loc>https://blog.kaio.ga/post/2018/12/proxy-server/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -67,49 +67,49 @@
   
   <url>
     <loc>https://blog.kaio.ga/post/2018/12/hugo-deploy/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/2018/12/hugo-customize/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/2018/12/hugo-install/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/demo/shortcodes/</loc>
-    <lastmod>2018-02-01T18:01:23+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/demo/js-flowchart-diagrams/</loc>
-    <lastmod>2015-03-04T21:57:50+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/demo/js-sequence-diagrams/</loc>
-    <lastmod>2015-03-04T21:57:45+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/demo/syntax-highlighting/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -122,21 +122,21 @@
   
   <url>
     <loc>https://blog.kaio.ga/demo/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/hugo/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/hugo/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -185,63 +185,63 @@
   
   <url>
     <loc>https://blog.kaio.ga/tags/raspberry-pi/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/raspberry-pi/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/syntax-highlighting/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/syntax-highlighting/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/theme-preview/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/theme-preview/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/category-2/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/category-3/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -255,7 +255,7 @@
   
   <url>
     <loc>https://blog.kaio.ga/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -269,42 +269,42 @@
   
   <url>
     <loc>https://blog.kaio.ga/tags/preview/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/proxy/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/shortcodes/</loc>
-    <lastmod>2018-02-01T18:01:23+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/shortcodes/</loc>
-    <lastmod>2018-02-01T18:01:23+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/tag-3/</loc>
-    <lastmod>2018-07-10T00:00:00+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/tags/tag-5/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -325,7 +325,7 @@
   
   <url>
     <loc>https://blog.kaio.ga/tags/%E8%87%AA%E5%AE%85server/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
