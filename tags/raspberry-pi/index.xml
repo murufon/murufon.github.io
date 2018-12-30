@@ -13,37 +13,37 @@
     
     <item>
       <title>プロキシサーバー</title>
-      <link>https://blog.kaio.ga/post/proxy-server/</link>
+      <link>https://blog.kaio.ga/post/2018/12/proxy-server/</link>
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/proxy-server/</guid>
+      <guid>https://blog.kaio.ga/post/2018/12/proxy-server/</guid>
       <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
     </item>
     
     <item>
       <title>MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する</title>
-      <link>https://blog.kaio.ga/post/rpi-mydns-letsencrypt/</link>
+      <link>https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/</link>
       <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/rpi-mydns-letsencrypt/</guid>
+      <guid>https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/</guid>
       <description>Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か</description>
     </item>
     
     <item>
       <title>Raspberry PiからMyDNSを使う</title>
-      <link>https://blog.kaio.ga/post/rpi-mydns-setup/</link>
+      <link>https://blog.kaio.ga/post/2018/12/rpi-mydns-setup/</link>
       <pubDate>Fri, 28 Dec 2018 17:40:16 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/rpi-mydns-setup/</guid>
+      <guid>https://blog.kaio.ga/post/2018/12/rpi-mydns-setup/</guid>
       <description>基本的にMyDNSのサイト( https://www.mydns.jp/ )のHOW TO USEに沿ってます MyDNSでの事前準備 MyDNSに登録する HOW TO USEなどを見ながらDNSレコード</description>
     </item>
     
     <item>
       <title>Raspberry Piのセットアップ(Raspbian)</title>
-      <link>https://blog.kaio.ga/post/rpi-raspbian-setup/</link>
+      <link>https://blog.kaio.ga/post/2018/12/rpi-raspbian-setup/</link>
       <pubDate>Fri, 28 Dec 2018 17:22:12 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/rpi-raspbian-setup/</guid>
+      <guid>https://blog.kaio.ga/post/2018/12/rpi-raspbian-setup/</guid>
       <description>Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード</description>
     </item>
     

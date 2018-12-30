@@ -13,10 +13,10 @@
     
     <item>
       <title>プロキシサーバー</title>
-      <link>https://blog.kaio.ga/post/proxy-server/</link>
+      <link>https://blog.kaio.ga/post/2018/12/proxy-server/</link>
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/proxy-server/</guid>
+      <guid>https://blog.kaio.ga/post/2018/12/proxy-server/</guid>
       <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
     </item>
     

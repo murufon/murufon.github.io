@@ -13,19 +13,19 @@
     
     <item>
       <title>MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する</title>
-      <link>https://blog.kaio.ga/post/rpi-mydns-letsencrypt/</link>
+      <link>https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/</link>
       <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/rpi-mydns-letsencrypt/</guid>
+      <guid>https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/</guid>
       <description>Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か</description>
     </item>
     
     <item>
       <title>Raspberry PiからMyDNSを使う</title>
-      <link>https://blog.kaio.ga/post/rpi-mydns-setup/</link>
+      <link>https://blog.kaio.ga/post/2018/12/rpi-mydns-setup/</link>
       <pubDate>Fri, 28 Dec 2018 17:40:16 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/rpi-mydns-setup/</guid>
+      <guid>https://blog.kaio.ga/post/2018/12/rpi-mydns-setup/</guid>
       <description>基本的にMyDNSのサイト( https://www.mydns.jp/ )のHOW TO USEに沿ってます MyDNSでの事前準備 MyDNSに登録する HOW TO USEなどを見ながらDNSレコード</description>
     </item>
     

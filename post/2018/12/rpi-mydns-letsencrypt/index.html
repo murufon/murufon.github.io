@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する - murufon&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="murufon" /><meta name="description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か" /><meta name="keywords" content="murufon, programming, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.3501ea5e.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する" />
+<meta property="og:description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/" /><meta property="article:published_time" content="2018-12-28T17:43:39&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-28T17:43:39&#43;09:00"/>
+
+<meta itemprop="name" content="MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する">
+<meta itemprop="description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か">
+
+
+<meta itemprop="datePublished" content="2018-12-28T17:43:39&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-28T17:43:39&#43;09:00" />
+<meta itemprop="wordCount" content="778">
+
+
+
+<meta itemprop="keywords" content="Raspberry Pi,自宅server,letsencrypt,mydns,Nginx," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する"/>
+<meta name="twitter:description" content="Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">murufon&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">murufon&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-12-28 </span>
+        <div class="post-category">
+            <a href="/categories/raspberry-pi/"> Raspberry Pi </a>
+            <a href="/categories/nginx/"> Nginx </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#nginx-のインストール">Nginx のインストール</a></li>
+<li><a href="#nginx-で-php-を使う設定">Nginx で PHP を使う設定</a></li>
+<li><a href="#証明書の取得">証明書の取得</a></li>
+<li><a href="#証明書を自動更新するための設定">証明書を自動更新するための設定</a>
+<ul>
+<li><a href="#cronに登録">cronに登録</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="nginx-のインストール">Nginx のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install nginx</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="nginx-で-php-を使う設定">Nginx で PHP を使う設定</h2>
+
+<p>これやらないとMyDNSのリポジトリでの証明書取得はできなさそう</p>
+
+<p>Raspberry Pi にWebサーバ入れてphp動かす - Qiita<br />
+<a href="https://qiita.com/Brutus/items/27525deedb0eea1b35b8">https://qiita.com/Brutus/items/27525deedb0eea1b35b8</a><br />
+上記サイトの通り。ただし、php7.0-fpmに加えてphp7.0-mbstringをinstallする</p>
+
+<h2 id="証明書の取得">証明書の取得</h2>
+
+<p>ワイルドカードの証明書を取得するにはcertbotの0.22以上が必要らしいが、現時点では<code>apt-get install</code>でバージョン0.10.2までしかはいらなかったのでGitから取ってくる</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/certbot/certbot.git ~/certbot</code></pre></td></tr></table>
+</div>
+</div>
+<p>MyDNS公式リポジトリ( <a href="https://github.com/disco-v8/DirectEdit/">https://github.com/disco-v8/DirectEdit/</a> )のREADMEを参照</p>
+
+<p>STEP1:<br />
+環境によって<code>/var/www/html</code>のところが違うかもしれない</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /var/www/html/
+wget <span class="s1">&#39;https://github.com/disco-v8/DirectEdit/archive/master.zip&#39;</span> -O DirectEdit-master.zip
+unzip ./DirectEdit-master.zip
+<span class="nb">cd</span> /var/www/html/DirectEdit-master/
+chmod <span class="m">700</span> ./*.php
+chmod <span class="m">600</span> ./*.conf</code></pre></td></tr></table>
+</div>
+</div>
+<p>STEP2:<br />
+READMEにしたがってMyDNSのアカウントの設定等をファイルに書き込む<br />
+<code>txtedit.conf</code>を編集する</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">    <span class="nv">$MYDNSJP_MASTERID</span>  <span class="o">=</span> <span class="s1">&#39;yourmasterid&#39;</span><span class="p">;</span>
+    <span class="nv">$MYDNSJP_MASTERPWD</span> <span class="o">=</span> <span class="s1">&#39;yourpasswd&#39;</span><span class="p">;</span>
+    <span class="nv">$MYDNSJP_DOMAIN</span> <span class="o">=</span> <span class="s1">&#39;yourdomain&#39;</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>STEP3:<br />
+READMEのコマンドの該当箇所を変更したら自分の環境では以下のようになった</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo ~/certbot/certbot-auto certonly --manual <span class="se">\
+</span><span class="se"></span>--preferred-challenges<span class="o">=</span>dns <span class="se">\
+</span><span class="se"></span>--manual-auth-hook /var/www/html/DirectEdit-master/txtregist.php <span class="se">\
+</span><span class="se"></span>--manual-cleanup-hook /var/www/html/DirectEdit-master/txtdelete.php <span class="se">\
+</span><span class="se"></span>-d kaio.ga -d *.kaio.ga <span class="se">\
+</span><span class="se"></span>--server https://acme-v02.api.letsencrypt.org/directory <span class="se">\
+</span><span class="se"></span>--agree-tos -m murufon2@gmail.com <span class="se">\
+</span><span class="se"></span>--manual-public-ip-logging-ok</code></pre></td></tr></table>
+</div>
+</div>
+<p>成功したら以下のようなメッセージがでてくるはず</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/kaio.ga/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/kaio.ga/privkey.pem
+   Your cert will expire on <span class="m">2018</span>-12-21. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot-auto
+   again. To non-interactively renew *all* of your certificates, run
+   <span class="s2">&#34;certbot-auto renew&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="証明書を自動更新するための設定">証明書を自動更新するための設定</h2>
+
+<p><code>certbot_renew.sh</code>を作成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ vi certbot_renew.sh</code></pre></td></tr></table>
+</div>
+</div>
+<p>環境によってsudo外したりcertbot-autoのpath書き換えたりしてください<br />
+証明書を更新したときに再起動しなければいけないサービスもここで再起動してあげます</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash:certbot_renew.sh" data-lang="bash:certbot_renew.sh"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash:certbot_renew.sh" data-lang="bash:certbot_renew.sh"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="c1"># 証明書の更新</span>
+sudo ~/certbot/certbot-auto renew
+<span class="c1"># nginxの再起動</span>
+sudo nginx -s reload</code></pre></td></tr></table>
+</div>
+</div>
+<p>実行権限の付与</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ chmod <span class="m">755</span> certbot_renew.sh</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="cronに登録">cronに登録</h3>
+
+<p>毎週土曜日の午前3時に証明書を更新する場合<br />
+<code>/home/pi/certbot_renew.sh</code>にシェルを置いている場合</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ crontab -e
+
+<span class="m">00</span> <span class="m">3</span> * * <span class="m">6</span> /home/pi/certbot_renew.sh</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">murufon</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-12-28</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/raspberry-pi/">Raspberry Pi</a>
+          <a href="/tags/%E8%87%AA%E5%AE%85server/">自宅server</a>
+          <a href="/tags/letsencrypt/">letsencrypt</a>
+          <a href="/tags/mydns/">mydns</a>
+          <a href="/tags/nginx/">Nginx</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/2018/12/proxy-server/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">プロキシサーバー</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2018/12/rpi-mydns-setup/">
+            <span class="next-text nav-default">Raspberry PiからMyDNSを使う</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:muruofon2@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/murufon" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/murufon" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.kaio.ga/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">murufon</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131272203-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

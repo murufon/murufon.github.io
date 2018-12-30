@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Raspberry Piのセットアップ(Raspbian) - murufon&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="murufon" /><meta name="description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード" /><meta name="keywords" content="murufon, programming, blog" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://blog.kaio.ga/post/2018/12/rpi-raspbian-setup/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.3501ea5e.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Raspberry Piのセットアップ(Raspbian)" />
+<meta property="og:description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.kaio.ga/post/2018/12/rpi-raspbian-setup/" /><meta property="article:published_time" content="2018-12-28T17:22:12&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-28T17:22:12&#43;09:00"/>
+
+<meta itemprop="name" content="Raspberry Piのセットアップ(Raspbian)">
+<meta itemprop="description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード">
+
+
+<meta itemprop="datePublished" content="2018-12-28T17:22:12&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-28T17:22:12&#43;09:00" />
+<meta itemprop="wordCount" content="1229">
+
+
+
+<meta itemprop="keywords" content="Raspberry Pi,自宅サーバー," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Raspberry Piのセットアップ(Raspbian)"/>
+<meta name="twitter:description" content="Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">murufon&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">murufon&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Raspberry Piのセットアップ(Raspbian)</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-12-28 </span>
+        <div class="post-category">
+            <a href="/categories/raspberry-pi/"> Raspberry Pi </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#raspbianのインストール">Raspbianのインストール</a></li>
+<li><a href="#初期設定">初期設定</a></li>
+<li><a href="#sdカードでの設定">SDカードでの設定</a></li>
+<li><a href="#外部から接続するための設定">外部から接続するための設定</a>
+<ul>
+<li><a href="#ipアドレスの固定">ipアドレスの固定</a></li>
+<li><a href="#ポートの開放">ポートの開放</a></li>
+</ul></li>
+<li><a href="#dockerとdocker-composeの導入">Dockerとdocker-composeの導入</a></li>
+<li><a href="#usbから外付けhddで起動させる">USBから外付けHDDで起動させる</a></li>
+<li><a href="#セキュリティやログインの設定">セキュリティやログインの設定</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ</p>
+
+<h2 id="raspbianのインストール">Raspbianのインストール</h2>
+
+<p>raspbian日本のミラーサイト - Qiita<br />
+<a href="https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8">https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8</a></p>
+
+<p>SDカードへの書き込みはEtcher <a href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></p>
+
+<h2 id="初期設定">初期設定</h2>
+
+<p>Raspberry Piをディスプレイ・キーボード・マウス無しの三重苦でもセットアップする方法 - karaage. [からあげ]<br />
+<a href="http://karaage.hatenadiary.jp/entry/2015/07/15/080000">http://karaage.hatenadiary.jp/entry/2015/07/15/080000</a></p>
+
+<p>ちなみに、↑のサイトではネットワーク内のIPアドレスを一覧表示させる方法でやっているが、Raspberry Piには初めからホスト名が設定されているので、IPアドレスを調べなくてもssh接続できる場合がある</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh pi@raspberrypi.local</code></pre></td></tr></table>
+</div>
+</div>
+<p>sshでのアクセスが可能になったら、</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo raspi-config</code></pre></td></tr></table>
+</div>
+</div>
+<p>で各種設定をしておくと良い</p>
+
+<h2 id="sdカードでの設定">SDカードでの設定</h2>
+
+<p>基本的には何も設定しなくてOK<br />
+ラズベリーパイには従来のBIOSがないため、通常はBIOSを使用して設定および設定されるさまざまなシステム構成パラメータが「config.txt」というテキストファイルに保存される。<br />
+/boot/config.txtはARMコアが初期化される前にGPUによって読み取られる。<br />
+/boot/config.txtの説明↓<br />
+<a href="https://elinux.org/RPiconfig">https://elinux.org/RPiconfig</a></p>
+
+<h2 id="外部から接続するための設定">外部から接続するための設定</h2>
+
+<h3 id="ipアドレスの固定">ipアドレスの固定</h3>
+
+<p>固定IPアドレスの設定（Wi-Fi（無線LAN）の場合）<br />
+<a href="http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html">http://www.hiramine.com/physicalcomputing/raspberrypi3/wlan_howto.html</a></p>
+
+<p>固定IPアドレスの設定（有線LANの場合）<br />
+<a href="https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html">https://www.hiramine.com/physicalcomputing/raspberrypi3/setup_staticip.html</a></p>
+
+<p>今回は以下のように設定しました</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">interface eth0
+static <span class="nv">ip_address</span><span class="o">=</span><span class="m">192</span>.168.1.50/24
+static <span class="nv">routers</span><span class="o">=</span><span class="m">192</span>.168.1.1
+static <span class="nv">domain_name_servers</span><span class="o">=</span><span class="m">192</span>.168.1.1</code></pre></td></tr></table>
+</div>
+</div>
+<p>設定した後はインターフェイスの再起動か本体の再起動を</p>
+
+<h3 id="ポートの開放">ポートの開放</h3>
+
+<p>RT-500KI ポート開放設定の説明<br />
+<a href="https://www.akakagemaru.info/port/rt500ki-portfw.html">https://www.akakagemaru.info/port/rt500ki-portfw.html</a></p>
+
+<h2 id="dockerとdocker-composeの導入">Dockerとdocker-composeの導入</h2>
+
+<p>Raspberry PiにDockerを入れる - Qiita<br />
+<a href="https://qiita.com/hisurga/items/7aca7484ac5bfd084294">https://qiita.com/hisurga/items/7aca7484ac5bfd084294</a></p>
+
+<p>ラズパイ上でdocker-composeをビルドしてもよかったのですが時間がかかるのと面倒だったのとで<code>pip</code>でインストール</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install python-pip
+sudo pip install docker-compose
+docker -v</code></pre></td></tr></table>
+</div>
+</div>
+<p>(参考)<br />
+Raspberry Pi用docker-composeの構築 - Qiita<br />
+<a href="https://qiita.com/tkyonezu/items/ceaaf41924df39254058">https://qiita.com/tkyonezu/items/ceaaf41924df39254058</a></p>
+
+<p>(参考)<br />
+Raspberry PiにDocker ComposeでownCloudを導入する - さやかちゃんドットネット<br />
+<a href="http://shira.hatenadiary.jp/entry/2018/05/14/145228">http://shira.hatenadiary.jp/entry/2018/05/14/145228</a></p>
+
+<h2 id="usbから外付けhddで起動させる">USBから外付けHDDで起動させる</h2>
+
+<p>DockerでいろいろするにはSDカードでの起動では不安だった<br />
+HDDのみでブートまでしてしまう方法もあるようだが、今回はブートはSDで</p>
+
+<p>(参考)<br />
+Raspberry PiをUSB(HDD)で起動させる<br />
+<a href="https://jyn.jp/raspberrypi-usb-boot/">https://jyn.jp/raspberrypi-usb-boot/</a></p>
+
+<p><code>/dev/sda3</code>は各自読み替えてください</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># インストールするパーティションがどこにマウントされているか探す</span>
+sudo fdisk -l
+<span class="c1"># アンマウントする</span>
+umount /dev/sda3
+<span class="c1"># フォーマットする</span>
+sudo mkfs.ext4 /dev/sda3
+<span class="c1"># マウントする</span>
+sudo mount -t ext4 -o defaults /dev/sda3 /mnt
+<span class="c1"># 全データをコピーする</span>
+sudo rsync -ax --progress / /mnt
+<span class="c1"># インストール先パーティションのPARTUUIDを確認する</span>
+ls -l /dev/disk/by-partuuid/
+<span class="c1"># HDD上の/etc/fstabを開き/のPARTUUIDを先ほど確認したPARTUUIDに変更する</span>
+sudo vim /mnt/etc/fstab
+<span class="c1"># root=PARTUUID=の値を変更する</span>
+sudo vim /boot/cmdline.txt
+<span class="c1"># 再起動する</span>
+sudo reboot now
+<span class="c1"># 容量を見て起動ディスクが変更されていたらOK</span>
+df -h</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="セキュリティやログインの設定">セキュリティやログインの設定</h2>
+
+<p>sshのポート変更とかssh公開鍵認証とか</p>
+
+<p>ラズパイの最低限のセキュリティー設定 | Feijoa.jp<br />
+<a href="http://www.feijoa.jp/laboratory/raspberrypi/minimumSecurity/">http://www.feijoa.jp/laboratory/raspberrypi/minimumSecurity/</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">murufon</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-12-28</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/raspberry-pi/">Raspberry Pi</a>
+          <a href="/tags/%E8%87%AA%E5%AE%85%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC/">自宅サーバー</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/2018/12/rpi-mydns-setup/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Raspberry PiからMyDNSを使う</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/2018/12/hugo-deploy/">
+            <span class="next-text nav-default">Hugoのデプロイ</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:muruofon2@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/murufon" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/murufon" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.kaio.ga/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">murufon</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131272203-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
