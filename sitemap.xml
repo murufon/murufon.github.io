@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://blog.kaio.ga/post/2018/12/laravel-memo/</loc>
+    <lastmod>2018-12-31T11:01:21+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.kaio.ga/post/2018/12/neural2/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -135,6 +142,20 @@
   </url>
   
   <url>
+    <loc>https://blog.kaio.ga/tags/laravel/</loc>
+    <lastmod>2018-12-31T11:01:21+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kaio.ga/categories/laravel/</loc>
+    <lastmod>2018-12-31T11:01:21+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.kaio.ga/tags/neural-network/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -156,8 +177,15 @@
   </url>
   
   <url>
+    <loc>https://blog.kaio.ga/tags/php/</loc>
+    <lastmod>2018-12-31T11:01:21+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.kaio.ga/post/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
+    <lastmod>2018-12-31T11:01:21+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

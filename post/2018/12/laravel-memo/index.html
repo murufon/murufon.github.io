@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hugoのインストール - murufon&#39;s blog</title>
+  <title>Laravelのメモ書き - murufon&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="murufon" /><meta name="description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し" /><meta name="keywords" content="murufon, programming, blog" />
+<meta name="author" content="murufon" /><meta name="description" content="環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &amp;lt;INSTALL_DIR&amp;gt; laravel new &amp;lt;PROJECT_NAME&amp;gt; cd &amp;lt;PROJECT_NAME&amp;gt; composer install Laravelの要素 ルーティング" /><meta name="keywords" content="murufon, programming, blog" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.53 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://blog.kaio.ga/post/2018/12/hugo-install/" />
+<link rel="canonical" href="https://blog.kaio.ga/post/2018/12/laravel-memo/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,26 +38,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Hugoのインストール" />
-<meta property="og:description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し" />
+<meta property="og:title" content="Laravelのメモ書き" />
+<meta property="og:description" content="環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &lt;INSTALL_DIR&gt; laravel new &lt;PROJECT_NAME&gt; cd &lt;PROJECT_NAME&gt; composer install Laravelの要素 ルーティング" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.kaio.ga/post/2018/12/hugo-install/" /><meta property="article:published_time" content="2018-12-26T23:30:53&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-30T16:46:24&#43;09:00"/>
+<meta property="og:url" content="https://blog.kaio.ga/post/2018/12/laravel-memo/" /><meta property="article:published_time" content="2018-12-31T11:01:21&#43;09:00"/>
+<meta property="article:modified_time" content="2018-12-31T11:01:21&#43;09:00"/>
 
-<meta itemprop="name" content="Hugoのインストール">
-<meta itemprop="description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し">
-
-
-<meta itemprop="datePublished" content="2018-12-26T23:30:53&#43;09:00" />
-<meta itemprop="dateModified" content="2018-12-30T16:46:24&#43;09:00" />
-<meta itemprop="wordCount" content="480">
+<meta itemprop="name" content="Laravelのメモ書き">
+<meta itemprop="description" content="環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &lt;INSTALL_DIR&gt; laravel new &lt;PROJECT_NAME&gt; cd &lt;PROJECT_NAME&gt; composer install Laravelの要素 ルーティング">
 
 
+<meta itemprop="datePublished" content="2018-12-31T11:01:21&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-31T11:01:21&#43;09:00" />
+<meta itemprop="wordCount" content="389">
 
-<meta itemprop="keywords" content="Hugo," />
+
+
+<meta itemprop="keywords" content="Laravel,PHP," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugoのインストール"/>
-<meta name="twitter:description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し"/>
+<meta name="twitter:title" content="Laravelのメモ書き"/>
+<meta name="twitter:description" content="環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &lt;INSTALL_DIR&gt; laravel new &lt;PROJECT_NAME&gt; cd &lt;PROJECT_NAME&gt; composer install Laravelの要素 ルーティング"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,12 +124,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Hugoのインストール</h1>
+      <h1 class="post-title">Laravelのメモ書き</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2018-12-26 </span>
+        <span class="post-time"> 2018-12-31 </span>
         <div class="post-category">
-            <a href="/categories/hugo/"> Hugo </a>
+            <a href="/categories/laravel/"> Laravel </a>
             </div>
         
       </div>
@@ -142,12 +142,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#hugoとは">hugoとは</a></li>
-<li><a href="#テーマ">テーマ</a>
+<li><a href="#環境">環境</a></li>
+<li><a href="#必要なもののインストール">必要なもののインストール</a></li>
+<li><a href="#laravelプロジェクトの作成">Laravelプロジェクトの作成</a></li>
+<li><a href="#laravelの要素">Laravelの要素</a>
 <ul>
-<li><a href="#気になったテーマ">気になったテーマ</a></li>
+<li><a href="#ルーティング">ルーティング</a></li>
+<li><a href="#ビュー">ビュー</a></li>
+<li><a href="#コントローラ">コントローラ</a></li>
 </ul></li>
-<li><a href="#セットアップ">セットアップ</a></li>
+<li><a href="#laravel-form-builderを使った時のリクエストの取り出し方">Laravel Form Builderを使った時のリクエストの取り出し方</a></li>
+<li><a href="#参考リンク集">参考リンク集</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -156,96 +161,97 @@
     <div class="post-content">
       
 
-<h2 id="hugoとは">hugoとは</h2>
-
-<p><a href="https://gohugo.io/" target="_blank">https://gohugo.io/</a><br />
-静的なサイトをつくるフレームワークで、Go言語で書かれている<br />
-Markdownで各ページを書いてそれをHTMLに変換(ビルド)し、それを公開する<br />
-事前にHTMLを生成するのでWordpressみたいにデータベースがいらないのでgithub pagesとかで公開できちゃう<br />
-他の静的サイトジェネレーターと比べてビルドが圧倒的に早いらしい</p>
-
-<h2 id="テーマ">テーマ</h2>
-
-<p>公式がテーマを一覧形式で出してくれている<br />
-<a href="https://themes.gohugo.io/" target="_blank">https://themes.gohugo.io/</a></p>
-
-<p>公式に採用されていない先人の自作テーマもググれば出てくると思う</p>
-
-<h3 id="気になったテーマ">気になったテーマ</h3>
+<h2 id="環境">環境</h2>
 
 <ul>
-<li><a href="https://themes.gohugo.io/potato-dark/" target="_blank">https://themes.gohugo.io/potato-dark/</a><br /></li>
-<li><a href="https://themes.gohugo.io/steam/" target="_blank">https://themes.gohugo.io/steam/</a><br /></li>
-<li><a href="https://themes.gohugo.io/hugo-theme-minos/" target="_blank">https://themes.gohugo.io/hugo-theme-minos/</a><br /></li>
-<li><a href="https://themes.gohugo.io/hugo-theme-even/" target="_blank">https://themes.gohugo.io/hugo-theme-even/</a><br /></li>
-<li><a href="https://themes.gohugo.io/kiss/" target="_blank">https://themes.gohugo.io/kiss/</a><br /></li>
-<li><a href="https://themes.gohugo.io/hugo-kiera/" target="_blank">https://themes.gohugo.io/hugo-kiera/</a><br />
+<li>Mac OS Mojave 10.14.2<br /></li>
+<li>PHP 7.1.19<br />
 <br /></li>
 </ul>
 
-<p>今回はevenを選択</p>
-
-<h2 id="セットアップ">セットアップ</h2>
-
-<p><a href="https://gohugo.io/getting-started/quick-start/" target="_blank">https://gohugo.io/getting-started/quick-start/</a><br />
-quick startを見ながらセットアップしてみる</p>
-
-<p>インストールとサイト作成</p>
+<h2 id="必要なもののインストール">必要なもののインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">brew install hugo
-hugo version
-hugo new site hugo-blog</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">composer global require laravel/installer</code></pre></td></tr></table>
 </div>
 </div>
-<p>テーマとか設定とか<br />
-今回はテーマはevenで進めます<br />
-<code>config.toml</code>についてはテーマごとに違うので各テーマのREADMEを参照</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> hugo-blog
-git clone https://github.com/olOwOlo/hugo-theme-even themes/even
-cp themes/even/exampleSite/config.toml .</code></pre></td></tr></table>
-</div>
-</div>
-<p>新規ページ作成<br />
-evenではpostsの代わりにpostを使うらしいので注意</p>
+<h2 id="laravelプロジェクトの作成">Laravelプロジェクトの作成</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo new post/my-first-post.md
-<span class="c1"># とりあえずHello World！！</span>
-cat <span class="s">&lt;&lt; EOF &gt;&gt; content/post/my-first-post.md
-</span><span class="s">Hello World
-</span><span class="s">EOF</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> &lt;INSTALL_DIR&gt;
+laravel new &lt;PROJECT_NAME&gt;
+<span class="nb">cd</span> &lt;PROJECT_NAME&gt;
+composer install</code></pre></td></tr></table>
 </div>
 </div>
-<p>サーバーを立ち上げる</p>
+<h2 id="laravelの要素">Laravelの要素</h2>
+
+<h3 id="ルーティング">ルーティング</h3>
+
+<p>場所<br />
+<code>routes/web.php</code></p>
+
+<h3 id="ビュー">ビュー</h3>
+
+<p>場所<br />
+<code>resources/views/&lt;VIEW_NAME&gt;.blade.php</code></p>
+
+<h3 id="コントローラ">コントローラ</h3>
+
+<p>つくる<br />
+<code>php artisan make:controller &lt;VIEW_NAME&gt;Controller</code><br />
+場所<br />
+<code>app/Http/Controllers/&lt;VIEW_NAME&gt;Controller.php</code></p>
+
+<h2 id="laravel-form-builderを使った時のリクエストの取り出し方">Laravel Form Builderを使った時のリクエストの取り出し方</h2>
+
+<p>ネット上には引数として直接<code>$request</code>を受け取っているサンプルが多かったが、$formBuilderからリクエストを取り出してやることでそれらのサンプルコードと同様の処理ができる</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo server -D</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-php" data-lang="php">function create(FormBuilder $formBuilder) {
+    // フォームの形式にする
+    $form = $formBuilder-&gt;create(\App\Forms\SomeForm::class);
+    // リクエストを取り出す
+    $request = $form-&gt;getRequest();
+(中略)</code></pre></td></tr></table>
 </div>
 </div>
-<p>localhost:1313で確認</p>
+<h2 id="参考リンク集">参考リンク集</h2>
+
+<p>データベース：マイグレーション 5.5 Laravel<br />
+<a href="https://readouble.com/laravel/5.5/ja/migrations.html" target="_blank">https://readouble.com/laravel/5.5/ja/migrations.html</a></p>
+
+<p>kristijanhusak/laravel-form-builder リポジトリ<br />
+<a href="https://github.com/kristijanhusak/laravel-form-builder" target="_blank">https://github.com/kristijanhusak/laravel-form-builder</a><br />
+Laravel form builderのドキュメント<br />
+<a href="https://kristijanhusak.github.io/laravel-form-builder/" target="_blank">https://kristijanhusak.github.io/laravel-form-builder/</a></p>
+
+<p>(Laravel) fillを使ってモデルの複数カラムを更新する - Qiita<br />
+<a href="https://qiita.com/tkt989/items/c2e01ec2fe91ef5f08d2" target="_blank">https://qiita.com/tkt989/items/c2e01ec2fe91ef5f08d2</a></p>
+
+<p>Laravel5.6 ログインユーザー情報取得と表示 - Qiita<br />
+<a href="https://qiita.com/kim_kou/items/b95af87568cdbf06fa61" target="_blank">https://qiita.com/kim_kou/items/b95af87568cdbf06fa61</a></p>
+
+<p>Laravel5.6 入力画面から完了画面までの流れ<br />
+<a href="https://9cubed.info/article/laravel5/laravel_5_app/" target="_blank">https://9cubed.info/article/laravel5/laravel_5_app/</a><br />
+入力画面→確認画面→完了画面のセッションの扱いとか</p>
 
     </div>
 
@@ -256,22 +262,19 @@ cat <span class="s">&lt;&lt; EOF &gt;&gt; content/post/my-first-post.md
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-12-30</span>
+    <span class="item-content">2018-12-31</span>
   </p>
   
   
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/hugo/">Hugo</a>
+          <a href="/tags/laravel/">Laravel</a>
+          <a href="/tags/php/">PHP</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/2018/12/hugo-customize/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Hugoのカスタマイズ</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/demo/js-sequence-diagrams/">
-            <span class="next-text nav-default">JS Sequence Diagrams</span>
+        
+        <a class="next" href="/post/2018/12/neural2/">
+            <span class="next-text nav-default">ニューラルネットワークと深層学習のお勉強(2)</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
