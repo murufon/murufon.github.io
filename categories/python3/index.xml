@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python3 on murufon&#39;s blog</title>
-    <link>https://blog.kaio.ga/categories/python3/</link>
+    <link>/categories/python3/</link>
     <description>Recent content in Python3 on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 30 Dec 2018 00:32:14 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.kaio.ga/categories/python3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/python3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ニューラルネットワークと深層学習のお勉強(2)</title>
-      <link>https://blog.kaio.ga/post/2018/12/neural2/</link>
+      <link>/post/2018/12/neural2/</link>
       <pubDate>Sun, 30 Dec 2018 00:32:14 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/neural2/</guid>
+      <guid>/post/2018/12/neural2/</guid>
       <description>逆伝播 コスト関数の勾配を高速に計算するアルゴリズム 逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微</description>
     </item>
     
     <item>
       <title>ニューラルネットワークと深層学習のお勉強(1)</title>
-      <link>https://blog.kaio.ga/post/2018/12/neural1/</link>
+      <link>/post/2018/12/neural1/</link>
       <pubDate>Sun, 30 Dec 2018 00:32:08 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/neural1/</guid>
+      <guid>/post/2018/12/neural1/</guid>
       <description>「ニューラルネットワークと深層学習( http://nnadl-ja.github.io/nnadl_site_ja/index.html )」を読んで勉強したことを書いていこうと思います。 これは自分の脳内整理用のメモであるため、内容が端折ら</description>
     </item>
     
     <item>
       <title>Python3でコンター図を描く</title>
-      <link>https://blog.kaio.ga/post/2018/12/python-contour/</link>
+      <link>/post/2018/12/python-contour/</link>
       <pubDate>Sun, 30 Dec 2018 00:27:43 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/python-contour/</guid>
+      <guid>/post/2018/12/python-contour/</guid>
       <description>以下を参考にさせていただきました https://qiita.com/AnchorBlues/items/0dd1499196670fdf1c46 よくわからないけど動いた！ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40</description>
     </item>
     

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Neural Network on murufon&#39;s blog</title>
-    <link>https://blog.kaio.ga/tags/neural-network/</link>
+    <link>/tags/neural-network/</link>
     <description>Recent content in Neural Network on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 30 Dec 2018 00:32:14 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.kaio.ga/tags/neural-network/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/neural-network/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ニューラルネットワークと深層学習のお勉強(2)</title>
-      <link>https://blog.kaio.ga/post/2018/12/neural2/</link>
+      <link>/post/2018/12/neural2/</link>
       <pubDate>Sun, 30 Dec 2018 00:32:14 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/neural2/</guid>
+      <guid>/post/2018/12/neural2/</guid>
       <description>逆伝播 コスト関数の勾配を高速に計算するアルゴリズム 逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微</description>
     </item>
     
     <item>
       <title>ニューラルネットワークと深層学習のお勉強(1)</title>
-      <link>https://blog.kaio.ga/post/2018/12/neural1/</link>
+      <link>/post/2018/12/neural1/</link>
       <pubDate>Sun, 30 Dec 2018 00:32:08 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/neural1/</guid>
+      <guid>/post/2018/12/neural1/</guid>
       <description>「ニューラルネットワークと深層学習( http://nnadl-ja.github.io/nnadl_site_ja/index.html )」を読んで勉強したことを書いていこうと思います。 これは自分の脳内整理用のメモであるため、内容が端折ら</description>
     </item>
     

@@ -2,129 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on murufon&#39;s blog</title>
-    <link>https://blog.kaio.ga/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 02 Jan 2019 22:40:48 +0900</lastBuildDate>
     
-	<atom:link href="https://blog.kaio.ga/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dockerfileで対話式のコマンドを扱う</title>
-      <link>https://blog.kaio.ga/post/2019/01/docker-interactive-command/</link>
+      <link>/post/2019/01/docker-interactive-command/</link>
       <pubDate>Wed, 02 Jan 2019 22:40:48 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2019/01/docker-interactive-command/</guid>
+      <guid>/post/2019/01/docker-interactive-command/</guid>
       <description>インストールの時にインストールディレクトリを聞かれたり何かに同意したりといったやりとりを対話式でできるコマンドがある そういうコマンドは便利な</description>
     </item>
     
     <item>
       <title>Laravelのメモ書き</title>
-      <link>https://blog.kaio.ga/post/2018/12/laravel-memo/</link>
+      <link>/post/2018/12/laravel-memo/</link>
       <pubDate>Mon, 31 Dec 2018 11:01:21 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/laravel-memo/</guid>
+      <guid>/post/2018/12/laravel-memo/</guid>
       <description>環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &amp;lt;INSTALL_DIR&amp;gt; laravel new &amp;lt;PROJECT_NAME&amp;gt; cd &amp;lt;PROJECT_NAME&amp;gt; composer install Laravelの要素 ルーティング</description>
     </item>
     
     <item>
       <title>ニューラルネットワークと深層学習のお勉強(2)</title>
-      <link>https://blog.kaio.ga/post/2018/12/neural2/</link>
+      <link>/post/2018/12/neural2/</link>
       <pubDate>Sun, 30 Dec 2018 00:32:14 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/neural2/</guid>
+      <guid>/post/2018/12/neural2/</guid>
       <description>逆伝播 コスト関数の勾配を高速に計算するアルゴリズム 逆伝播の本質はコスト関数$C$のネットワークの重み$w$もしくはバイアス$b$に関する偏微</description>
     </item>
     
     <item>
       <title>ニューラルネットワークと深層学習のお勉強(1)</title>
-      <link>https://blog.kaio.ga/post/2018/12/neural1/</link>
+      <link>/post/2018/12/neural1/</link>
       <pubDate>Sun, 30 Dec 2018 00:32:08 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/neural1/</guid>
+      <guid>/post/2018/12/neural1/</guid>
       <description>「ニューラルネットワークと深層学習( http://nnadl-ja.github.io/nnadl_site_ja/index.html )」を読んで勉強したことを書いていこうと思います。 これは自分の脳内整理用のメモであるため、内容が端折ら</description>
     </item>
     
     <item>
       <title>Python3でコンター図を描く</title>
-      <link>https://blog.kaio.ga/post/2018/12/python-contour/</link>
+      <link>/post/2018/12/python-contour/</link>
       <pubDate>Sun, 30 Dec 2018 00:27:43 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/python-contour/</guid>
+      <guid>/post/2018/12/python-contour/</guid>
       <description>以下を参考にさせていただきました https://qiita.com/AnchorBlues/items/0dd1499196670fdf1c46 よくわからないけど動いた！ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40</description>
     </item>
     
     <item>
       <title>プロキシサーバー</title>
-      <link>https://blog.kaio.ga/post/2018/12/proxy-server/</link>
+      <link>/post/2018/12/proxy-server/</link>
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/proxy-server/</guid>
+      <guid>/post/2018/12/proxy-server/</guid>
       <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
     </item>
     
     <item>
       <title>MyDNSで設定したドメインでLet&#39;s Encryptの証明書を取得する</title>
-      <link>https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/</link>
+      <link>/post/2018/12/rpi-mydns-letsencrypt/</link>
       <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/rpi-mydns-letsencrypt/</guid>
+      <guid>/post/2018/12/rpi-mydns-letsencrypt/</guid>
       <description>Nginx のインストール 1 sudo apt-get install nginx Nginx で PHP を使う設定 これやらないとMyDNSのリポジトリでの証明書取得はできなさそう Raspberry Pi にWebサーバ入れてphp動か</description>
     </item>
     
     <item>
       <title>Raspberry PiからMyDNSを使う</title>
-      <link>https://blog.kaio.ga/post/2018/12/rpi-mydns-setup/</link>
+      <link>/post/2018/12/rpi-mydns-setup/</link>
       <pubDate>Fri, 28 Dec 2018 17:40:16 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/rpi-mydns-setup/</guid>
+      <guid>/post/2018/12/rpi-mydns-setup/</guid>
       <description>基本的にMyDNSのサイト( https://www.mydns.jp/ )のHOW TO USEに沿ってます MyDNSでの事前準備 MyDNSに登録する HOW TO USEなどを見ながらDNSレコード</description>
     </item>
     
     <item>
       <title>Raspberry Piのセットアップ(Raspbian)</title>
-      <link>https://blog.kaio.ga/post/2018/12/rpi-raspbian-setup/</link>
+      <link>/post/2018/12/rpi-raspbian-setup/</link>
       <pubDate>Fri, 28 Dec 2018 17:22:12 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/rpi-raspbian-setup/</guid>
+      <guid>/post/2018/12/rpi-raspbian-setup/</guid>
       <description>Raspberry Pi 3 をセットアップしたときの手順と参考にしたリンクのまとめ Raspbianのインストール raspbian日本のミラーサイト - Qiita https://qiita.com/tukiyo3/items/c8555eacb67466b81bc8 SDカード</description>
     </item>
     
     <item>
       <title>Hugoのデプロイ</title>
-      <link>https://blog.kaio.ga/post/2018/12/hugo-deploy/</link>
+      <link>/post/2018/12/hugo-deploy/</link>
       <pubDate>Thu, 27 Dec 2018 00:20:37 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/hugo-deploy/</guid>
+      <guid>/post/2018/12/hugo-deploy/</guid>
       <description>GitHub Pagesを使って作ったサイトを公開してみたいと思います リポジトリ名や公開するフォルダによっていくつかやり方がありますが、独自ドメインにす</description>
     </item>
     
     <item>
       <title>Hugoのカスタマイズ</title>
-      <link>https://blog.kaio.ga/post/2018/12/hugo-customize/</link>
+      <link>/post/2018/12/hugo-customize/</link>
       <pubDate>Wed, 26 Dec 2018 23:43:53 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/hugo-customize/</guid>
+      <guid>/post/2018/12/hugo-customize/</guid>
       <description>自分が設定した項目のメモ 各種設定 基本的な設定はconfig.tomlを書き換えることで設定できるようになっている テーマごとに設定項目に異なる</description>
     </item>
     
     <item>
       <title>Hugoのインストール</title>
-      <link>https://blog.kaio.ga/post/2018/12/hugo-install/</link>
+      <link>/post/2018/12/hugo-install/</link>
       <pubDate>Wed, 26 Dec 2018 23:30:53 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/2018/12/hugo-install/</guid>
+      <guid>/post/2018/12/hugo-install/</guid>
       <description>hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し</description>
     </item>
     
     <item>
       <title>JS Sequence Diagrams</title>
-      <link>https://blog.kaio.ga/post/demo/js-sequence-diagrams/</link>
+      <link>/post/demo/js-sequence-diagrams/</link>
       <pubDate>Wed, 05 Jan 2000 00:00:00 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/demo/js-sequence-diagrams/</guid>
+      <guid>/post/demo/js-sequence-diagrams/</guid>
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -144,10 +144,10 @@ Andrew-&amp;gt;&amp;gt;China: I am good thanks!&lt;/code&gt;&lt;/pre&gt;&lt;/td&
     
     <item>
       <title>JS Flowchart Diagrams</title>
-      <link>https://blog.kaio.ga/post/demo/js-flowchart-diagrams/</link>
+      <link>/post/demo/js-flowchart-diagrams/</link>
       <pubDate>Tue, 04 Jan 2000 00:00:00 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/demo/js-flowchart-diagrams/</guid>
+      <guid>/post/demo/js-flowchart-diagrams/</guid>
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -189,10 +189,10 @@ c2(no)-&amp;gt;op2-&amp;gt;e&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/
     
     <item>
       <title>Syntax Highlighting</title>
-      <link>https://blog.kaio.ga/post/demo/syntax-highlighting/</link>
+      <link>/post/demo/syntax-highlighting/</link>
       <pubDate>Mon, 03 Jan 2000 00:00:00 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/demo/syntax-highlighting/</guid>
+      <guid>/post/demo/syntax-highlighting/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -211,10 +211,10 @@ c2(no)-&amp;gt;op2-&amp;gt;e&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/
     
     <item>
       <title>Shortcodes</title>
-      <link>https://blog.kaio.ga/post/demo/shortcodes/</link>
+      <link>/post/demo/shortcodes/</link>
       <pubDate>Sun, 02 Jan 2000 00:00:00 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/demo/shortcodes/</guid>
+      <guid>/post/demo/shortcodes/</guid>
       <description>&lt;h1 id=&#34;admonition&#34;&gt;Admonition&lt;/h1&gt;
 
 &lt;div class=&#34;admonition note&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;I&amp;#39;m title!&lt;/p&gt;
@@ -265,10 +265,10 @@ c2(no)-&amp;gt;op2-&amp;gt;e&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/
     
     <item>
       <title>Theme preview</title>
-      <link>https://blog.kaio.ga/post/demo/even-preview/</link>
+      <link>/post/demo/even-preview/</link>
       <pubDate>Sat, 01 Jan 2000 00:00:00 +0900</pubDate>
       
-      <guid>https://blog.kaio.ga/post/demo/even-preview/</guid>
+      <guid>/post/demo/even-preview/</guid>
       <description>Based on MarkdownPreview test.md. Markdown 1 2 3 4 5 6 7 8 # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 ### Duplicate Header ### Duplicate Header H1 H2 H3 H4 H5 H6 Duplicate Header Duplicate Header Paragraphs 1 2 3 4 This is a paragraph. I am still part of the paragraph. New paragraph. This is a paragraph. I am still part of the paragraph.</description>
     </item>
     
