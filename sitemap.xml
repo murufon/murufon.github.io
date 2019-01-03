@@ -10,8 +10,15 @@
   </url>
   
   <url>
+    <loc>https://blog.kaio.ga/post/2019/01/docker-interactive-command/</loc>
+    <lastmod>2019-01-02T22:40:48+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.kaio.ga/post/2018/12/laravel-memo/</loc>
-    <lastmod>2019-01-01T17:54:09+09:00</lastmod>
+    <lastmod>2019-01-02T17:36:41+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -128,6 +135,27 @@
   </url>
   
   <url>
+    <loc>https://blog.kaio.ga/tags/docker/</loc>
+    <lastmod>2019-01-02T22:40:48+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kaio.ga/categories/docker/</loc>
+    <lastmod>2019-01-02T22:40:48+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kaio.ga/tags/dockerfile/</loc>
+    <lastmod>2019-01-02T22:40:48+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.kaio.ga/tags/hugo/</loc>
     <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -143,14 +171,14 @@
   
   <url>
     <loc>https://blog.kaio.ga/tags/laravel/</loc>
-    <lastmod>2019-01-01T17:54:09+09:00</lastmod>
+    <lastmod>2019-01-02T17:36:41+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/categories/laravel/</loc>
-    <lastmod>2019-01-01T17:54:09+09:00</lastmod>
+    <lastmod>2019-01-02T17:36:41+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -178,14 +206,14 @@
   
   <url>
     <loc>https://blog.kaio.ga/tags/php/</loc>
-    <lastmod>2019-01-01T17:54:09+09:00</lastmod>
+    <lastmod>2019-01-02T17:36:41+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.kaio.ga/post/</loc>
-    <lastmod>2019-01-01T17:54:09+09:00</lastmod>
+    <lastmod>2019-01-02T22:40:48+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -220,7 +248,7 @@
   
   <url>
     <loc>https://blog.kaio.ga/tags/</loc>
-    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
+    <lastmod>2019-01-02T22:40:48+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
