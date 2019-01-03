@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>/tags/docker/</loc>
+    <loc>/categories/docker/</loc>
     <lastmod>2019-01-03T09:48:59+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/docker/</loc>
+    <loc>/tags/docker/</loc>
     <lastmod>2019-01-03T09:48:59+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>/tags/hugo/</loc>
-    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/hugo/</loc>
     <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,14 +163,21 @@
   </url>
   
   <url>
-    <loc>/tags/laravel/</loc>
-    <lastmod>2019-01-02T17:36:41+09:00</lastmod>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/laravel/</loc>
+    <lastmod>2019-01-02T17:36:41+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/laravel/</loc>
     <lastmod>2019-01-02T17:36:41+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>/tags/nginx/</loc>
+    <loc>/categories/nginx/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/nginx/</loc>
+    <loc>/tags/nginx/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -219,13 +219,6 @@
   </url>
   
   <url>
-    <loc>/tags/python3/</loc>
-    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/python3/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -233,14 +226,21 @@
   </url>
   
   <url>
-    <loc>/tags/raspberry-pi/</loc>
-    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
+    <loc>/tags/python3/</loc>
+    <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/raspberry-pi/</loc>
+    <lastmod>2018-12-30T16:46:24+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/raspberry-pi/</loc>
     <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -282,14 +282,14 @@
   </url>
   
   <url>
-    <loc>/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
+    <loc>/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
+    <loc>/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
