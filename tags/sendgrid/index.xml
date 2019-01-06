@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sendgrid on murufon&#39;s blog</title>
+    <link>/tags/sendgrid/</link>
+    <description>Recent content in Sendgrid on murufon&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 04 Jan 2019 18:16:31 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/sendgrid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LaravelでSendgridを使ってメール送信</title>
+      <link>/post/2019/01/laravel-sendgrid/</link>
+      <pubDate>Fri, 04 Jan 2019 18:16:31 +0900</pubDate>
+      
+      <guid>/post/2019/01/laravel-sendgrid/</guid>
+      <description>いろいろ方法はありますが、 API Keyを発行する SendgridのAPI Keyを発行しておきます 発行は[ここ]から(https://app.se</description>
+    </item>
+    
+  </channel>
+</rss>
