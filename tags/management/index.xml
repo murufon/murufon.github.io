@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>management on murufon&#39;s blog</title>
+    <link>/tags/management/</link>
+    <description>Recent content in management on murufon&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 07 Jan 2019 20:50:57 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>マネジメント用語</title>
+      <link>/post/2019/01/management/</link>
+      <pubDate>Mon, 07 Jan 2019 20:50:57 +0900</pubDate>
+      
+      <guid>/post/2019/01/management/</guid>
+      <description>プロジェクトマネジメントで使われる用語について調べる機会があったためせっかくなので意味を軽くまとめてみる PERT図 参考: https://fujifilm.jp/business/future-clip/visualization/vol4.html PERT = Program Evaluation and Review Technique (ち</description>
+    </item>
+    
+  </channel>
+</rss>

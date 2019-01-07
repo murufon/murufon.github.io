@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>マネジメント用語</title>
+      <link>/post/2019/01/management/</link>
+      <pubDate>Mon, 07 Jan 2019 20:50:57 +0900</pubDate>
+      
+      <guid>/post/2019/01/management/</guid>
+      <description>プロジェクトマネジメントで使われる用語について調べる機会があったためせっかくなので意味を軽くまとめてみる PERT図 参考: https://fujifilm.jp/business/future-clip/visualization/vol4.html PERT = Program Evaluation and Review Technique (ち</description>
+    </item>
+    
+    <item>
       <title>Dockerfileで対話式のコマンドを扱う</title>
       <link>/post/2019/01/docker-interactive-command/</link>
       <pubDate>Wed, 02 Jan 2019 22:40:48 +0900</pubDate>
