@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hugoのインストール - murufon&#39;s blog</title>
+  <title>Gitのブランチをリポジトリとして独立させる - murufon&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="murufon" /><meta name="description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し" /><meta name="keywords" content="murufon, programming, blog" />
+<meta name="author" content="murufon" /><meta name="description" content="old-repoというリポジトリのsome-branchというブランチをnew-repoというリポジトリとして独立させたいとする まずnew-" /><meta name="keywords" content="murufon, programming, blog" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
 
 
-<link rel="canonical" href="/post/2018/12/hugo-install/" />
+<link rel="canonical" href="/post/2019/03/branch-to-repo/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,27 +38,27 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Hugoのインストール" />
-<meta property="og:description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し" />
+<meta property="og:title" content="Gitのブランチをリポジトリとして独立させる" />
+<meta property="og:description" content="old-repoというリポジトリのsome-branchというブランチをnew-repoというリポジトリとして独立させたいとする まずnew-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/2018/12/hugo-install/" />
-<meta property="article:published_time" content="2018-12-26T23:30:53&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-30T16:46:24&#43;09:00"/>
+<meta property="og:url" content="/post/2019/03/branch-to-repo/" />
+<meta property="article:published_time" content="2019-03-13T09:57:32&#43;09:00"/>
+<meta property="article:modified_time" content="2019-03-13T09:57:32&#43;09:00"/>
 
-<meta itemprop="name" content="Hugoのインストール">
-<meta itemprop="description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し">
-
-
-<meta itemprop="datePublished" content="2018-12-26T23:30:53&#43;09:00" />
-<meta itemprop="dateModified" content="2018-12-30T16:46:24&#43;09:00" />
-<meta itemprop="wordCount" content="480">
+<meta itemprop="name" content="Gitのブランチをリポジトリとして独立させる">
+<meta itemprop="description" content="old-repoというリポジトリのsome-branchというブランチをnew-repoというリポジトリとして独立させたいとする まずnew-">
 
 
+<meta itemprop="datePublished" content="2019-03-13T09:57:32&#43;09:00" />
+<meta itemprop="dateModified" content="2019-03-13T09:57:32&#43;09:00" />
+<meta itemprop="wordCount" content="221">
 
-<meta itemprop="keywords" content="Hugo," />
+
+
+<meta itemprop="keywords" content="Git," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugoのインストール"/>
-<meta name="twitter:description" content="hugoとは https://gohugo.io/ 静的なサイトをつくるフレームワークで、Go言語で書かれている Markdownで各ページを書いてそれをHTMLに変換(ビルド)し"/>
+<meta name="twitter:title" content="Gitのブランチをリポジトリとして独立させる"/>
+<meta name="twitter:description" content="old-repoというリポジトリのsome-branchというブランチをnew-repoというリポジトリとして独立させたいとする まずnew-"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -125,12 +125,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Hugoのインストール</h1>
+      <h1 class="post-title">Gitのブランチをリポジトリとして独立させる</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2018-12-26 </span>
+        <span class="post-time"> 2019-03-13 </span>
         <div class="post-category">
-            <a href="/categories/hugo/"> Hugo </a>
+            <a href="/categories/git/"> Git </a>
             </div>
         
       </div>
@@ -143,12 +143,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#hugoとは">hugoとは</a></li>
-<li><a href="#テーマ">テーマ</a>
-<ul>
-<li><a href="#気になったテーマ">気になったテーマ</a></li>
-</ul></li>
-<li><a href="#セットアップ">セットアップ</a></li>
+<li><a href="#リモートのurlの変更">リモートのURLの変更</a></li>
+<li><a href="#ローカルのmasterブランチを削除する">ローカルのmasterブランチを削除する</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -157,97 +153,58 @@
     <div class="post-content">
       
 
-<h2 id="hugoとは">hugoとは</h2>
+<p><code>old-repo</code>というリポジトリの<code>some-branch</code>というブランチを<code>new-repo</code>というリポジトリとして独立させたいとする<br />
+まず<code>new-repo</code>という名前で空のリポジトリを作っておく</p>
 
-<p><a href="https://gohugo.io/" target="_blank">https://gohugo.io/</a><br />
-静的なサイトをつくるフレームワークで、Go言語で書かれている<br />
-Markdownで各ページを書いてそれをHTMLに変換(ビルド)し、それを公開する<br />
-事前にHTMLを生成するのでWordpressみたいにデータベースがいらないのでgithub pagesとかで公開できちゃう<br />
-他の静的サイトジェネレーターと比べてビルドが圧倒的に早いらしい</p>
+<h2 id="リモートのurlの変更">リモートのURLの変更</h2>
 
-<h2 id="テーマ">テーマ</h2>
-
-<p>公式がテーマを一覧形式で出してくれている<br />
-<a href="https://themes.gohugo.io/" target="_blank">https://themes.gohugo.io/</a></p>
-
-<p>公式に採用されていない先人の自作テーマもググれば出てくると思う</p>
-
-<h3 id="気になったテーマ">気になったテーマ</h3>
-
-<ul>
-<li><a href="https://themes.gohugo.io/potato-dark/" target="_blank">https://themes.gohugo.io/potato-dark/</a><br /></li>
-<li><a href="https://themes.gohugo.io/steam/" target="_blank">https://themes.gohugo.io/steam/</a><br /></li>
-<li><a href="https://themes.gohugo.io/hugo-theme-minos/" target="_blank">https://themes.gohugo.io/hugo-theme-minos/</a><br /></li>
-<li><a href="https://themes.gohugo.io/hugo-theme-even/" target="_blank">https://themes.gohugo.io/hugo-theme-even/</a><br /></li>
-<li><a href="https://themes.gohugo.io/kiss/" target="_blank">https://themes.gohugo.io/kiss/</a><br /></li>
-<li><a href="https://themes.gohugo.io/hugo-kiera/" target="_blank">https://themes.gohugo.io/hugo-kiera/</a><br />
-<br /></li>
-</ul>
-
-<p>今回はevenを選択</p>
-
-<h2 id="セットアップ">セットアップ</h2>
-
-<p><a href="https://gohugo.io/getting-started/quick-start/" target="_blank">https://gohugo.io/getting-started/quick-start/</a><br />
-quick startを見ながらセットアップしてみる</p>
-
-<p>インストールとサイト作成</p>
+<p>今のremote origin url</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">brew install hugo
-hugo version
-hugo new site hugo-blog</code></pre></td></tr></table>
+<pre class="chroma">git config remote.origin.url</pre></td></tr></table>
 </div>
 </div>
-<p>テーマとか設定とか<br />
-今回はテーマはevenで進めます<br />
-<code>config.toml</code>についてはテーマごとに違うので各テーマのREADMEを参照</p>
+<p>新しいURLにする</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> hugo-blog
-git clone https://github.com/olOwOlo/hugo-theme-even themes/even
-cp themes/even/exampleSite/config.toml .</code></pre></td></tr></table>
+<pre class="chroma">git config remote.origin.url &lt;new-repoのURL&gt;</pre></td></tr></table>
 </div>
 </div>
-<p>新規ページ作成<br />
-evenではpostsの代わりにpostを使うらしいので注意</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo new post/my-first-post.md
-<span class="c1"># とりあえずHello World！！</span>
-cat <span class="s">&lt;&lt; EOF &gt;&gt; content/post/my-first-post.md
-</span><span class="s">Hello World
-</span><span class="s">EOF</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>サーバーを立ち上げる</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo server -D</code></pre></td></tr></table>
-</div>
-</div>
-<p>localhost:1313で確認</p>
+<h2 id="ローカルのmasterブランチを削除する">ローカルのmasterブランチを削除する</h2>
 
+<p>ローカルブランチ一覧</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git branch</pre></td></tr></table>
+</div>
+</div>
+<p>ブランチを削除する</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git branch --delete master</pre></td></tr></table>
+</div>
+</div>
+<p>ブランチの名前をmasterにする</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git branch -m some-branch master</pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">
@@ -257,22 +214,18 @@ cat <span class="s">&lt;&lt; EOF &gt;&gt; content/post/my-first-post.md
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2018-12-30</span>
+    <span class="item-content">2019-03-13</span>
   </p>
   
   
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/hugo/">Hugo</a>
+          <a href="/tags/git/">Git</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/2018/12/hugo-customize/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Hugoのカスタマイズ</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/demo/js-sequence-diagrams/">
-            <span class="next-text nav-default">JS Sequence Diagrams</span>
+        
+        <a class="next" href="/post/2019/03/vscode/">
+            <span class="next-text nav-default">AtomからVSCodeに乗り換えた話</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

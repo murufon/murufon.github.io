@@ -6,61 +6,17 @@
     <description>Recent content in Categories on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <lastBuildDate>Wed, 13 Mar 2019 09:57:32 +0900</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Docker</title>
-      <link>/categories/docker/</link>
-      <pubDate>Wed, 02 Jan 2019 22:40:48 +0900</pubDate>
+      <title>Git</title>
+      <link>/categories/git/</link>
+      <pubDate>Wed, 13 Mar 2019 09:57:32 +0900</pubDate>
       
-      <guid>/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>/categories/hugo/</link>
-      <pubDate>Thu, 27 Dec 2018 00:20:37 +0900</pubDate>
-      
-      <guid>/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Laravel</title>
-      <link>/categories/laravel/</link>
-      <pubDate>Mon, 31 Dec 2018 11:01:21 +0900</pubDate>
-      
-      <guid>/categories/laravel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx</title>
-      <link>/categories/nginx/</link>
-      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
-      
-      <guid>/categories/nginx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python3</title>
-      <link>/categories/python3/</link>
-      <pubDate>Sun, 30 Dec 2018 00:32:14 +0900</pubDate>
-      
-      <guid>/categories/python3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raspberry Pi</title>
-      <link>/categories/raspberry-pi/</link>
-      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
-      
-      <guid>/categories/raspberry-pi/</guid>
+      <guid>/categories/git/</guid>
       <description></description>
     </item>
     
@@ -74,11 +30,65 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>/categories/docker/</link>
+      <pubDate>Wed, 02 Jan 2019 22:40:48 +0900</pubDate>
+      
+      <guid>/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laravel</title>
+      <link>/categories/laravel/</link>
+      <pubDate>Mon, 31 Dec 2018 11:01:21 +0900</pubDate>
+      
+      <guid>/categories/laravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python3</title>
+      <link>/categories/python3/</link>
+      <pubDate>Sun, 30 Dec 2018 00:32:14 +0900</pubDate>
+      
+      <guid>/categories/python3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>機械学習</title>
       <link>/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</link>
       <pubDate>Sun, 30 Dec 2018 00:32:14 +0900</pubDate>
       
       <guid>/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi</title>
+      <link>/categories/raspberry-pi/</link>
+      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
+      
+      <guid>/categories/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>/categories/nginx/</link>
+      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
+      
+      <guid>/categories/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/categories/hugo/</link>
+      <pubDate>Thu, 27 Dec 2018 00:20:37 +0900</pubDate>
+      
+      <guid>/categories/hugo/</guid>
       <description></description>
     </item>
     
