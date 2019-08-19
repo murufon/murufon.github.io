@@ -10,45 +10,64 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-08-09T15:32:00+09:00</lastmod>
+    <lastmod>2019-08-20T00:14:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/git/</loc>
-    <lastmod>2019-08-09T15:32:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/git/</loc>
-    <lastmod>2019-08-09T15:32:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/2019/03/branch-to-repo/</loc>
-    <lastmod>2019-08-09T15:32:00+09:00</lastmod>
+    <loc>/post/2019/08/galleria-xt-ubuntu/</loc>
+    <lastmod>2019-08-20T00:14:44+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-08-09T15:32:00+09:00</lastmod>
+    <lastmod>2019-08-20T00:14:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-08-09T15:32:00+09:00</lastmod>
+    <lastmod>2019-08-20T00:14:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/linux/</loc>
+    <lastmod>2019-08-20T00:14:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2019-08-20T00:14:44+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-08-09T15:32:00+09:00</lastmod>
+    <lastmod>2019-08-20T00:14:44+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/git/</loc>
+    <lastmod>2019-08-09T15:34:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/git/</loc>
+    <lastmod>2019-08-09T15:34:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/2019/03/branch-to-repo/</loc>
+    <lastmod>2019-08-09T15:34:39+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -83,13 +102,13 @@
   </url>
   
   <url>
-    <loc>/tags/management/</loc>
+    <loc>/categories/management/</loc>
     <lastmod>2019-01-07T22:15:49+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/management/</loc>
+    <loc>/tags/management/</loc>
     <lastmod>2019-01-07T22:15:49+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -102,13 +121,13 @@
   </url>
   
   <url>
-    <loc>/tags/docker/</loc>
+    <loc>/categories/docker/</loc>
     <lastmod>2019-01-03T09:48:59+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/docker/</loc>
+    <loc>/tags/docker/</loc>
     <lastmod>2019-01-03T09:48:59+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -127,13 +146,13 @@
   </url>
   
   <url>
-    <loc>/tags/laravel/</loc>
+    <loc>/categories/laravel/</loc>
     <lastmod>2019-01-02T17:36:41+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/laravel/</loc>
+    <loc>/tags/laravel/</loc>
     <lastmod>2019-01-02T17:36:41+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -158,13 +177,13 @@
   </url>
   
   <url>
-    <loc>/tags/python3/</loc>
+    <loc>/categories/python3/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/python3/</loc>
+    <loc>/tags/python3/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -177,13 +196,13 @@
   </url>
   
   <url>
-    <loc>/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
+    <loc>/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
+    <loc>/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -203,13 +222,13 @@
   </url>
   
   <url>
-    <loc>/tags/raspberry-pi/</loc>
+    <loc>/categories/raspberry-pi/</loc>
     <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/raspberry-pi/</loc>
+    <loc>/tags/raspberry-pi/</loc>
     <lastmod>2018-12-30T16:46:24+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -241,13 +260,13 @@
   </url>
   
   <url>
-    <loc>/tags/nginx/</loc>
+    <loc>/categories/nginx/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/nginx/</loc>
+    <loc>/tags/nginx/</loc>
     <lastmod>2018-12-30T15:00:37+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -285,13 +304,13 @@
   </url>
   
   <url>
-    <loc>/tags/hugo/</loc>
+    <loc>/categories/hugo/</loc>
     <lastmod>2018-12-30T22:13:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/hugo/</loc>
+    <loc>/tags/hugo/</loc>
     <lastmod>2018-12-30T22:13:07+09:00</lastmod>
     <priority>0</priority>
   </url>

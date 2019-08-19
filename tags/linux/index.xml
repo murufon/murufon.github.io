@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on murufon&#39;s blog</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in linux on murufon&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 20 Aug 2019 00:14:44 +0900</lastBuildDate>
+    
+	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Galleria XTにUbuntu18.04を入れた話</title>
+      <link>/post/2019/08/galleria-xt-ubuntu/</link>
+      <pubDate>Tue, 20 Aug 2019 00:14:44 +0900</pubDate>
+      
+      <guid>/post/2019/08/galleria-xt-ubuntu/</guid>
+      <description>GALLERIA XTにUbuntu18.04日本語Remixをインストールしたときの話 USBからUbuntuを起動してインストーラーに遵いながらエラーが出</description>
+    </item>
+    
+  </channel>
+</rss>

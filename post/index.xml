@@ -6,10 +6,19 @@
     <description>Recent content in Posts on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 13 Mar 2019 09:57:32 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 00:14:44 +0900</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Galleria XTにUbuntu18.04を入れた話</title>
+      <link>/post/2019/08/galleria-xt-ubuntu/</link>
+      <pubDate>Tue, 20 Aug 2019 00:14:44 +0900</pubDate>
+      
+      <guid>/post/2019/08/galleria-xt-ubuntu/</guid>
+      <description>GALLERIA XTにUbuntu18.04日本語Remixをインストールしたときの話 USBからUbuntuを起動してインストーラーに遵いながらエラーが出</description>
+    </item>
     
     <item>
       <title>Gitのブランチをリポジトリとして独立させる</title>
