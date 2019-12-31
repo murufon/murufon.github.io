@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.62.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="/post/2019/01/management/" />
@@ -42,21 +42,17 @@
 <meta property="og:description" content="プロジェクトマネジメントで使われる用語について調べる機会があったためせっかくなので意味を軽くまとめてみる PERT図 参考: https://fujifilm.jp/business/future-clip/visualization/vol4.html PERT = Program Evaluation and Review Technique (ち" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/2019/01/management/" />
-<meta property="article:published_time" content="2019-01-07T20:50:57&#43;09:00"/>
-<meta property="article:modified_time" content="2019-01-07T22:15:49&#43;09:00"/>
-
+<meta property="article:published_time" content="2019-01-07T20:50:57+09:00" />
+<meta property="article:modified_time" content="2019-01-07T22:15:49+09:00" />
 <meta itemprop="name" content="マネジメント用語">
 <meta itemprop="description" content="プロジェクトマネジメントで使われる用語について調べる機会があったためせっかくなので意味を軽くまとめてみる PERT図 参考: https://fujifilm.jp/business/future-clip/visualization/vol4.html PERT = Program Evaluation and Review Technique (ち">
-
-
 <meta itemprop="datePublished" content="2019-01-07T20:50:57&#43;09:00" />
 <meta itemprop="dateModified" content="2019-01-07T22:15:49&#43;09:00" />
 <meta itemprop="wordCount" content="1029">
 
 
 
-<meta itemprop="keywords" content="management,TOC,PERT,PMBOK,ODSC," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="management,TOC,PERT,PMBOK,ODSC," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="マネジメント用語"/>
 <meta name="twitter:description" content="プロジェクトマネジメントで使われる用語について調べる機会があったためせっかくなので意味を軽くまとめてみる PERT図 参考: https://fujifilm.jp/business/future-clip/visualization/vol4.html PERT = Program Evaluation and Review Technique (ち"/>
 
@@ -140,97 +136,70 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#pert図">PERT図</a></li>
-<li><a href="#toc理論">TOC理論</a></li>
-<li><a href="#pmbok-ピンボック">PMBOK(ピンボック)</a>
-<ul>
-<li><a href="#10の知識">10の知識</a></li>
-<li><a href="#5つのプロセス">5つのプロセス</a></li>
-<li><a href="#3つのパート">3つのパート</a></li>
-</ul></li>
-<li><a href="#odsc">ODSC</a>
-<ul>
-<li><a href="#o-objectives">O: Objectives</a></li>
-<li><a href="#d-deliverables">D: Deliverables</a></li>
-<li><a href="#sc-success-criteria">SC: Success Criteria</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#pert">PERT図</a></li>
+    <li><a href="#toc">TOC理論</a></li>
+    <li><a href="#pmbok">PMBOK(ピンボック)</a>
+      <ul>
+        <li><a href="#10">10の知識</a></li>
+        <li><a href="#5">5つのプロセス</a></li>
+        <li><a href="#3">3つのパート</a></li>
+      </ul>
+    </li>
+    <li><a href="#odsc">ODSC</a>
+      <ul>
+        <li><a href="#o-objectives">O: Objectives</a></li>
+        <li><a href="#d-deliverables">D: Deliverables</a></li>
+        <li><a href="#sc-success-criteria">SC: Success Criteria</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>プロジェクトマネジメントで使われる用語について調べる機会があったためせっかくなので意味を軽くまとめてみる</p>
-
-<h2 id="pert図">PERT図</h2>
-
-<p>参考: <a href="https://fujifilm.jp/business/future-clip/visualization/vol4.html" target="_blank">https://fujifilm.jp/business/future-clip/visualization/vol4.html</a><br />
-PERT = Program Evaluation and Review Technique (ちょっと強引に日本語訳すると「計画の評価と見直しの手法」)<br />
-プロジェクトの各工程を作業順に矢印で結び所要時間を書き込む<br />
+      <p>プロジェクトマネジメントで使われる用語について調べる機会があったためせっかくなので意味を軽くまとめてみる</p>
+<h2 id="pert">PERT図</h2>
+<p>参考: <a href="https://fujifilm.jp/business/future-clip/visualization/vol4.html">https://fujifilm.jp/business/future-clip/visualization/vol4.html</a>
+PERT = Program Evaluation and Review Technique (ちょっと強引に日本語訳すると「計画の評価と見直しの手法」)
+プロジェクトの各工程を作業順に矢印で結び所要時間を書き込む
 各工程に取りかかれる最も早いタイミングや、各工程の開始をいつまで引き伸ばすことができるかを図で表すことができる</p>
-
-<h2 id="toc理論">TOC理論</h2>
-
-<p>参考: <a href="https://www.goldrattconsulting.com/webfiles/fck/files/%E3%80%90%E5%BF%85%E8%AA%AD%E3%80%91%E5%85%A8%E4%BD%93%E6%9C%80%E9%81%A9%E3%81%AE%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E7%90%86%E8%AB%96TOC%E5%9F%BA%E7%A4%8Erev1.pdf" target="_blank">全体最適のマネジメント理論 TOC 科学的理論を定義する「仮説の論理構造」とよりよい社会への可能性</a><br />
-TOC = Theory Of Constraints (制約理論)<br />
-1984年に発表され、今もなお使われているマネジメント理論<br />
-社会科学においても自然科学における理論と同じレベルの再現性・一般性を持つ理論であることに重きを置いている<br />
-ボトルネックを見つけ全体最適を目指す<br />
+<h2 id="toc">TOC理論</h2>
+<p>参考: <a href="https://www.goldrattconsulting.com/webfiles/fck/files/%E3%80%90%E5%BF%85%E8%AA%AD%E3%80%91%E5%85%A8%E4%BD%93%E6%9C%80%E9%81%A9%E3%81%AE%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88%E7%90%86%E8%AB%96TOC%E5%9F%BA%E7%A4%8Erev1.pdf">全体最適のマネジメント理論 TOC 科学的理論を定義する「仮説の論理構造」とよりよい社会への可能性</a>
+TOC = Theory Of Constraints (制約理論)
+1984年に発表され、今もなお使われているマネジメント理論
+社会科学においても自然科学における理論と同じレベルの再現性・一般性を持つ理論であることに重きを置いている
+ボトルネックを見つけ全体最適を目指す
 理論の流れを要約すると</p>
-
 <ul>
-<li>各工程にはつながりがあり、個人間や組織間には処理能力のばらつきがある<br /></li>
-<li>つながりとばらつきのあるところには、かならず制約がある<br /></li>
-<li>非制約(制約のないところ)の改善にリソースを使うのは無駄であり、また制約を改善するリソースを使うため全体にダメージを与えている<br /></li>
-<li>制約にリソースを集中させることが全体に成果をもたらす<br />
-<br /></li>
+<li>各工程にはつながりがあり、個人間や組織間には処理能力のばらつきがある</li>
+<li>つながりとばらつきのあるところには、かならず制約がある</li>
+<li>非制約(制約のないところ)の改善にリソースを使うのは無駄であり、また制約を改善するリソースを使うため全体にダメージを与えている</li>
+<li>制約にリソースを集中させることが全体に成果をもたらす</li>
 </ul>
-
-<h2 id="pmbok-ピンボック">PMBOK(ピンボック)</h2>
-
-<p>PMBOK = Project Management Body of Knowledge (プロジェクトマネジメントの知識体系)<br />
-プロジェクトマネジメントのノウハウや手法を体系立ててまとめたもの<br />
-プロジェクトマネジメントの事実上の世界標準<br />
-PMBOKを作成したPMI(本部をアメリカに置く非営利団体)によって4年に1度くらいのペースで改訂されている<br />
+<h2 id="pmbok">PMBOK(ピンボック)</h2>
+<p>PMBOK = Project Management Body of Knowledge (プロジェクトマネジメントの知識体系)
+プロジェクトマネジメントのノウハウや手法を体系立ててまとめたもの
+プロジェクトマネジメントの事実上の世界標準
+PMBOKを作成したPMI(本部をアメリカに置く非営利団体)によって4年に1度くらいのペースで改訂されている
 PMIはPMP(Project Management Professional)というプロジェクトマネジメントに関する国際資格の認定を行なっている</p>
-
 <ul>
-<li>初めてプロジェクトマネジメントを体系化した<br /></li>
-<li>プロセスのマネジメントの重要性を示した<br />
-<br /></li>
+<li>初めてプロジェクトマネジメントを体系化した</li>
+<li>プロセスのマネジメントの重要性を示した</li>
 </ul>
-
-<h3 id="10の知識">10の知識</h3>
-
+<h3 id="10">10の知識</h3>
 <p>Q品質管理、C原価管理、Dスケジュール管理、スコープ管理、要員管理、コミュニケーション管理、リスク管理、調達管理、ステークホルダー(利害関係者)管理、統合管理</p>
-
-<h3 id="5つのプロセス">5つのプロセス</h3>
-
+<h3 id="5">5つのプロセス</h3>
 <p>立ち上げ→計画→実行→管理・監視→集結</p>
-
-<h3 id="3つのパート">3つのパート</h3>
-
+<h3 id="3">3つのパート</h3>
 <p>入力→ツールと実戦技法→出力</p>
-
 <h2 id="odsc">ODSC</h2>
-
 <p>プロジェクトの目標を明確にするための手法。以下の3つの項目について書き出すことでプロジェクトの最終目標、コンセプト、目指すべきところが明らかになり、タスクを俯瞰しやすくなる、目標を見失いにくくなるといったことに役立つ</p>
-
 <h3 id="o-objectives">O: Objectives</h3>
-
 <p>プロジェクトの目的</p>
-
 <h3 id="d-deliverables">D: Deliverables</h3>
-
 <p>プロジェクトの成果物</p>
-
 <h3 id="sc-success-criteria">SC: Success Criteria</h3>
-
 <p>プロジェクトの成功基準</p>
 
     </div>

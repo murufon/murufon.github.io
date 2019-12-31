@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.62.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="/post/2018/12/rpi-mydns-setup/" />
@@ -42,21 +42,17 @@
 <meta property="og:description" content="基本的にMyDNSのサイト( https://www.mydns.jp/ )のHOW TO USEに沿ってます MyDNSでの事前準備 MyDNSに登録する HOW TO USEなどを見ながらDNSレコード" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/2018/12/rpi-mydns-setup/" />
-<meta property="article:published_time" content="2018-12-28T17:40:16&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-30T15:00:37&#43;09:00"/>
-
+<meta property="article:published_time" content="2018-12-28T17:40:16+09:00" />
+<meta property="article:modified_time" content="2018-12-30T15:00:37+09:00" />
 <meta itemprop="name" content="Raspberry PiからMyDNSを使う">
 <meta itemprop="description" content="基本的にMyDNSのサイト( https://www.mydns.jp/ )のHOW TO USEに沿ってます MyDNSでの事前準備 MyDNSに登録する HOW TO USEなどを見ながらDNSレコード">
-
-
 <meta itemprop="datePublished" content="2018-12-28T17:40:16&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-30T15:00:37&#43;09:00" />
 <meta itemprop="wordCount" content="417">
 
 
 
-<meta itemprop="keywords" content="Raspberry Pi,mydns,自宅server," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Raspberry Pi,mydns,自宅server," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Raspberry PiからMyDNSを使う"/>
 <meta name="twitter:description" content="基本的にMyDNSのサイト( https://www.mydns.jp/ )のHOW TO USEに沿ってます MyDNSでの事前準備 MyDNSに登録する HOW TO USEなどを見ながらDNSレコード"/>
 
@@ -140,44 +136,34 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#mydnsでの事前準備">MyDNSでの事前準備</a></li>
-<li><a href="#mydnsへipを通知するスクリプトの作成">MyDNSへIPを通知するスクリプトの作成</a></li>
-<li><a href="#cronへの登録">cronへの登録</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#mydns">MyDNSでの事前準備</a></li>
+    <li><a href="#mydnsip">MyDNSへIPを通知するスクリプトの作成</a></li>
+    <li><a href="#cron">cronへの登録</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>基本的にMyDNSのサイト( <a href="https://www.mydns.jp/" target="_blank">https://www.mydns.jp/</a> )のHOW TO USEに沿ってます</p>
-
-<h2 id="mydnsでの事前準備">MyDNSでの事前準備</h2>
-
-<p>MyDNSに登録する<br />
+      <p>基本的にMyDNSのサイト( <a href="https://www.mydns.jp/">https://www.mydns.jp/</a> )のHOW TO USEに沿ってます</p>
+<h2 id="mydns">MyDNSでの事前準備</h2>
+<p>MyDNSに登録する
 HOW TO USEなどを見ながらDNSレコードを設定する</p>
-
-<h2 id="mydnsへipを通知するスクリプトの作成">MyDNSへIPを通知するスクリプトの作成</h2>
-
+<h2 id="mydnsip">MyDNSへIPを通知するスクリプトの作成</h2>
 <p>明示的にIPv4とIPv6の両方通知するようにしました</p>
-
 <p><code>mydns_noticeip.sh</code>を作成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ vi mydns_noticeip.sh</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ vi mydns_noticeip.sh
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>以下をコピペしてMasterIDとPasswordは置き換えてください</p>
+</div><p>以下をコピペしてMasterIDとPasswordは置き換えてください</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash:mydns_noticeip.sh" data-lang="bash:mydns_noticeip.sh"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -191,32 +177,32 @@ HOW TO USEなどを見ながらDNSレコードを設定する</p>
 <span class="nv">MasterID</span><span class="o">=</span><span class="s2">&#34;mydns123456&#34;</span>
 <span class="nv">Password</span><span class="o">=</span><span class="s2">&#34;xxxxxxxxxxx&#34;</span>
 
-wget -O - <span class="s2">&#34;http://</span><span class="si">${</span><span class="nv">MasterID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">Password</span><span class="si">}</span><span class="s2">@ipv4.mydns.jp/login.html&#34;</span>
-wget -O - <span class="s2">&#34;http://</span><span class="si">${</span><span class="nv">MasterID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">Password</span><span class="si">}</span><span class="s2">@ipv6.mydns.jp/login.html&#34;</span></code></pre></td></tr></table>
+wget -O - <span class="s2">&#34;</span><span class="s2">http://</span><span class="si">${</span><span class="nv">MasterID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">Password</span><span class="si">}</span><span class="s2">@ipv4.mydns.jp/login.html</span><span class="s2">&#34;</span>
+wget -O - <span class="s2">&#34;</span><span class="s2">http://</span><span class="si">${</span><span class="nv">MasterID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">Password</span><span class="si">}</span><span class="s2">@ipv6.mydns.jp/login.html</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>実行権限の付与</p>
+</div><p>実行権限の付与</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ chmod <span class="m">755</span> mydns_noticeip.sh</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ chmod <span class="m">755</span> mydns_noticeip.sh
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>送信確認</p>
+</div><p>送信確認</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ ./mydns_noticeip.sh</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ ./mydns_noticeip.sh
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>以下のようなものが返ってくればOKです(IPv4の分とIPv6の分で2回出ます)</p>
+</div><p>以下のようなものが返ってくればOKです(IPv4の分とIPv6の分で2回出ます)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -243,26 +229,25 @@ wget -O - <span class="s2">&#34;http://</span><span class="si">${</span><span cl
       <span class="nv">leftmargin</span><span class="o">=</span><span class="s2">&#34;0&#34;</span> <span class="nv">topmargin</span><span class="o">=</span><span class="s2">&#34;0&#34;</span> <span class="nv">marginwidth</span><span class="o">=</span><span class="s2">&#34;0&#34;</span> <span class="nv">marginheight</span><span class="o">=</span><span class="s2">&#34;0&#34;</span>
 &gt;
 Login and IP address notify OK.&lt;BR&gt;
-...</code></pre></td></tr></table>
+...
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="cronへの登録">cronへの登録</h2>
-
-<p>5分おきに通知する場合<br />
+</div><h2 id="cron">cronへの登録</h2>
+<p>5分おきに通知する場合
 <code>/home/pi/mydns_noticeip.sh</code>にシェルを置いている場合</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ crontab -e
 
-*/5 * * * * /home/pi/mydns_noticeip.sh</code></pre></td></tr></table>
+*/5 * * * * /home/pi/mydns_noticeip.sh
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>実際に通知できているかはMyDNSの最新IP通知日時を確認すればわかります</p>
+</div><p>実際に通知できているかはMyDNSの最新IP通知日時を確認すればわかります</p>
 
     </div>
 

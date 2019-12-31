@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.62.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="/post/2019/01/docker-interactive-command/" />
@@ -42,21 +42,17 @@
 <meta property="og:description" content="インストールの時にインストールディレクトリを聞かれたり何かに同意したりといったやりとりを対話式でできるコマンドがある そういうコマンドは便利な" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/2019/01/docker-interactive-command/" />
-<meta property="article:published_time" content="2019-01-02T22:40:48&#43;09:00"/>
-<meta property="article:modified_time" content="2019-01-03T09:48:59&#43;09:00"/>
-
+<meta property="article:published_time" content="2019-01-02T22:40:48+09:00" />
+<meta property="article:modified_time" content="2019-01-03T09:48:59+09:00" />
 <meta itemprop="name" content="Dockerfileで対話式のコマンドを扱う">
 <meta itemprop="description" content="インストールの時にインストールディレクトリを聞かれたり何かに同意したりといったやりとりを対話式でできるコマンドがある そういうコマンドは便利な">
-
-
 <meta itemprop="datePublished" content="2019-01-02T22:40:48&#43;09:00" />
 <meta itemprop="dateModified" content="2019-01-03T09:48:59&#43;09:00" />
 <meta itemprop="wordCount" content="532">
 
 
 
-<meta itemprop="keywords" content="Docker,Dockerfile," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Docker,Dockerfile," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dockerfileで対話式のコマンドを扱う"/>
 <meta name="twitter:description" content="インストールの時にインストールディレクトリを聞かれたり何かに同意したりといったやりとりを対話式でできるコマンドがある そういうコマンドは便利な"/>
 
@@ -140,75 +136,63 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#yオプション">-yオプション</a></li>
-<li><a href="#yesコマンド">yesコマンド</a></li>
-<li><a href="#expectコマンド">expectコマンド</a></li>
-<li><a href="#標準入力を使う">標準入力を使う</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#-y">-yオプション</a></li>
+    <li><a href="#yes">yesコマンド</a></li>
+    <li><a href="#expect">expectコマンド</a></li>
+    <li><a href="#heading">標準入力を使う</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>インストールの時にインストールディレクトリを聞かれたり何かに同意したりといったやりとりを対話式でできるコマンドがある<br />
+      <p>インストールの時にインストールディレクトリを聞かれたり何かに同意したりといったやりとりを対話式でできるコマンドがある
 そういうコマンドは便利な反面Dockerfileで扱うのは面倒である</p>
-
 <p>そんなときのやり方メモ</p>
-
-<h2 id="yオプション">-yオプション</h2>
-
-<p>コマンドによっては-yコマンドで対応できる場合がある<br />
+<h2 id="-y">-yオプション</h2>
+<p>コマンドによっては-yコマンドで対応できる場合がある
 例えば<code>apt-get install</code>とか</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">apt-get install -y vim</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">apt-get install -y vim
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="yesコマンド">yesコマンド</h2>
-
-<p><code>yes</code>コマンドはひたすら<code>y</code>を出すコマンド<br />
-入力が<code>yes</code>だけでいいならこれをパイプで渡してあげれば良い<br />
+</div><h2 id="yes">yesコマンド</h2>
+<p><code>yes</code>コマンドはひたすら<code>y</code>を出すコマンド
+入力が<code>yes</code>だけでいいならこれをパイプで渡してあげれば良い
 複数回の入力が必要でも</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">yes <span class="p">|</span> sh install.sh</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">yes <span class="p">|</span> sh install.sh
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="expectコマンド">expectコマンド</h2>
-
-<p>ちゃんと条件分岐させたいときはexpectコマンドを使う<br />
-出力に合わせて入力を返すことができる<br />
-タイムアウト時間やexitコードの設定もできる<br />
+</div><h2 id="expect">expectコマンド</h2>
+<p>ちゃんと条件分岐させたいときはexpectコマンドを使う
+出力に合わせて入力を返すことができる
+タイムアウト時間やexitコードの設定もできる
 コマンドが長くなりがちなので別ファイルに分けてビルドのときに渡してあげるようにしたほうがよさそう</p>
-
-<h2 id="標準入力を使う">標準入力を使う</h2>
-
-<p>やっぱりシェルの機能使うのがシンプルで楽<br />
+<h2 id="heading">標準入力を使う</h2>
+<p>やっぱりシェルの機能使うのがシンプルで楽
 一行だけなら</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;yes&#34;</span> <span class="p">|</span> sh install.sh</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;yes&#34;</span> <span class="p">|</span> sh install.sh
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>複数行なら<br />
+</div><p>複数行なら
 例えば以下のように入力したいものを改行して並べた<code>inputs.txt</code>を用意して</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-txt" data-lang="txt"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -223,19 +207,19 @@ no
 no
 yes
 /path/to/installdir
-　</code></pre></td></tr></table>
+　
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>こう</p>
+</div><p>こう</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sh install.sh &lt; inputs.txt</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">sh install.sh &lt; inputs.txt
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>大抵の場合はEnter(Return)で文字列を送る必要があるので最後に改行を忘れないようにする<br />
+</div><p>大抵の場合はEnter(Return)で文字列を送る必要があるので最後に改行を忘れないようにする
 ただEnterだけでよい場合は空行にするとよい</p>
 
     </div>

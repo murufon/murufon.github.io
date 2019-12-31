@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on murufon&#39;s blog</title>
@@ -6,10 +6,28 @@
     <description>Recent content in Tags on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 20 Aug 2019 00:14:44 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:29:15 +0900</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>arduino</title>
+      <link>/tags/arduino/</link>
+      <pubDate>Tue, 31 Dec 2019 12:29:15 +0900</pubDate>
+      
+      <guid>/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>電子工作</title>
+      <link>/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Tue, 31 Dec 2019 12:29:15 +0900</pubDate>
+      
+      <guid>/tags/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>linux</title>
@@ -26,6 +44,15 @@
       <pubDate>Wed, 13 Mar 2019 09:57:32 +0900</pubDate>
       
       <guid>/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>management</title>
+      <link>/tags/management/</link>
+      <pubDate>Mon, 07 Jan 2019 20:50:57 +0900</pubDate>
+      
+      <guid>/tags/management/</guid>
       <description></description>
     </item>
     
@@ -62,15 +89,6 @@
       <pubDate>Mon, 07 Jan 2019 20:50:57 +0900</pubDate>
       
       <guid>/tags/toc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>management</title>
-      <link>/tags/management/</link>
-      <pubDate>Mon, 07 Jan 2019 20:50:57 +0900</pubDate>
-      
-      <guid>/tags/management/</guid>
       <description></description>
     </item>
     
@@ -138,15 +156,6 @@
     </item>
     
     <item>
-      <title>Raspberry Pi</title>
-      <link>/tags/raspberry-pi/</link>
-      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
-      
-      <guid>/tags/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>proxy</title>
       <link>/tags/proxy/</link>
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
@@ -156,20 +165,20 @@
     </item>
     
     <item>
+      <title>Raspberry Pi</title>
+      <link>/tags/raspberry-pi/</link>
+      <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
+      
+      <guid>/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>自宅server</title>
       <link>/tags/%E8%87%AA%E5%AE%85server/</link>
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
       <guid>/tags/%E8%87%AA%E5%AE%85server/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx</title>
-      <link>/tags/nginx/</link>
-      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
-      
-      <guid>/tags/nginx/</guid>
       <description></description>
     </item>
     
@@ -188,6 +197,15 @@
       <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
       
       <guid>/tags/mydns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Fri, 28 Dec 2018 17:43:39 +0900</pubDate>
+      
+      <guid>/tags/nginx/</guid>
       <description></description>
     </item>
     

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>murufon&#39;s blog</title>
@@ -6,7 +6,7 @@
     <description>Recent content on murufon&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 20 Aug 2019 00:14:44 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:29:15 +0900</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>/about/</guid>
       <description>About About Me はじめまして。むるふぉんと申します 2017年ごろから趣味でWeb系のことを勉強しています 使っている技術(よく使っている順) CSS HTML Docker Git JavaScript Python3</description>
+    </item>
+    
+    <item>
+      <title>Arduino NanoをUSBシリアル変換器として使う</title>
+      <link>/post/2019/12/arduino-nano-as-usb-to-serial-converter/</link>
+      <pubDate>Tue, 31 Dec 2019 12:29:15 +0900</pubDate>
+      
+      <guid>/post/2019/12/arduino-nano-as-usb-to-serial-converter/</guid>
+      <description>CH380Gをシリアル変換器として搭載している安価なArduino Nanoを単体のUSBシリアル変換器として使う方法です。 「Arduino シ</description>
     </item>
     
     <item>
@@ -107,7 +116,7 @@
       <pubDate>Fri, 28 Dec 2018 17:49:25 +0900</pubDate>
       
       <guid>/post/2018/12/proxy-server/</guid>
-      <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&amp;rsquo;sEncryptでhttps対応のサーバーを立てましたが</description>
+      <description>プロキシサーバーの設定 自宅のraspberrypiにMyDNS+Let&#39;sEncryptでhttps対応のサーバーを立てましたが、自宅からは</description>
     </item>
     
     <item>
@@ -173,16 +182,17 @@
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sequence&#34; data-lang=&#34;sequence&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sequence&#34; data-lang=&#34;sequence&#34;&gt;Andrew-&amp;gt;China: Says Hello
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;Andrew-&amp;gt;China: Says Hello
 Note right of China: China thinks\nabout it
 China--&amp;gt;Andrew: How are you?
-Andrew-&amp;gt;&amp;gt;China: I am good thanks!&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+Andrew-&amp;gt;&amp;gt;China: I am good thanks!
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
@@ -196,7 +206,7 @@ Andrew-&amp;gt;&amp;gt;China: I am good thanks!&lt;/code&gt;&lt;/pre&gt;&lt;/td&
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-flowchart&#34; data-lang=&#34;flowchart&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
@@ -213,7 +223,7 @@ Andrew-&amp;gt;&amp;gt;China: I am good thanks!&lt;/code&gt;&lt;/pre&gt;&lt;/td&
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-flowchart&#34; data-lang=&#34;flowchart&#34;&gt;st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank]
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank]
 e=&amp;gt;end: End:&amp;gt;http://www.google.com
 op1=&amp;gt;operation: My Operation|past
 op2=&amp;gt;operation: Stuff|current
@@ -227,7 +237,8 @@ st-&amp;gt;op1(right)-&amp;gt;cond
 cond(yes, right)-&amp;gt;c2
 cond(no)-&amp;gt;sub1(left)-&amp;gt;op1
 c2(yes)-&amp;gt;io-&amp;gt;e
-c2(no)-&amp;gt;op2-&amp;gt;e&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+c2(no)-&amp;gt;op2-&amp;gt;e
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
@@ -240,12 +251,12 @@ c2(no)-&amp;gt;op2-&amp;gt;e&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/
       <guid>/post/demo/syntax-highlighting/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;helloWorld&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;helloWorld&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;alert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -260,25 +271,16 @@ c2(no)-&amp;gt;op2-&amp;gt;e&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/
       
       <guid>/post/demo/shortcodes/</guid>
       <description>&lt;h1 id=&#34;admonition&#34;&gt;Admonition&lt;/h1&gt;
-
-&lt;div class=&#34;admonition note&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;I&amp;#39;m title!&lt;/p&gt;
-  
-biu biu biu.
-
-&lt;details class=&#34;admonition note&#34;&gt;&lt;summary class=&#34;admonition-title&#34;&gt;note&lt;/summary&gt;
-  &lt;p&gt;biu biu biu.&lt;/p&gt;
-
-&lt;/details&gt;
-
-&lt;div class=&#34;admonition example&#34;&gt;
-  &lt;p&gt;Without title.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;biu biu biu.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
@@ -303,7 +305,8 @@ biu biu biu.
 Without title.
 {{% /admonition %}}
 
-{{% /admonition %}}&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+{{% /admonition %}}
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
     </item>

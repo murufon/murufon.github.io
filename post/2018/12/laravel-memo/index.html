@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.62.0 with even 4.0.0" />
 
 
 <link rel="canonical" href="/post/2018/12/laravel-memo/" />
@@ -42,21 +42,17 @@
 <meta property="og:description" content="環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &lt;INSTALL_DIR&gt; laravel new &lt;PROJECT_NAME&gt; cd &lt;PROJECT_NAME&gt; composer install Laravelの要素 ルーティング" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/2018/12/laravel-memo/" />
-<meta property="article:published_time" content="2018-12-31T11:01:21&#43;09:00"/>
-<meta property="article:modified_time" content="2019-01-02T17:36:41&#43;09:00"/>
-
+<meta property="article:published_time" content="2018-12-31T11:01:21+09:00" />
+<meta property="article:modified_time" content="2019-01-02T17:36:41+09:00" />
 <meta itemprop="name" content="Laravelのメモ書き">
 <meta itemprop="description" content="環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &lt;INSTALL_DIR&gt; laravel new &lt;PROJECT_NAME&gt; cd &lt;PROJECT_NAME&gt; composer install Laravelの要素 ルーティング">
-
-
 <meta itemprop="datePublished" content="2018-12-31T11:01:21&#43;09:00" />
 <meta itemprop="dateModified" content="2019-01-02T17:36:41&#43;09:00" />
 <meta itemprop="wordCount" content="389">
 
 
 
-<meta itemprop="keywords" content="Laravel,PHP," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Laravel,PHP," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Laravelのメモ書き"/>
 <meta name="twitter:description" content="環境 Mac OS Mojave 10.14.2 PHP 7.1.19 必要なもののインストール 1 composer global require laravel/installer Laravelプロジェクトの作成 1 2 3 4 cd &lt;INSTALL_DIR&gt; laravel new &lt;PROJECT_NAME&gt; cd &lt;PROJECT_NAME&gt; composer install Laravelの要素 ルーティング"/>
 
@@ -140,49 +136,42 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#環境">環境</a></li>
-<li><a href="#必要なもののインストール">必要なもののインストール</a></li>
-<li><a href="#laravelプロジェクトの作成">Laravelプロジェクトの作成</a></li>
-<li><a href="#laravelの要素">Laravelの要素</a>
-<ul>
-<li><a href="#ルーティング">ルーティング</a></li>
-<li><a href="#ビュー">ビュー</a></li>
-<li><a href="#コントローラ">コントローラ</a></li>
-</ul></li>
-<li><a href="#laravel-form-builderを使った時のリクエストの取り出し方">Laravel Form Builderを使った時のリクエストの取り出し方</a></li>
-<li><a href="#参考リンク集">参考リンク集</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">環境</a></li>
+    <li><a href="#heading-1">必要なもののインストール</a></li>
+    <li><a href="#laravel">Laravelプロジェクトの作成</a></li>
+    <li><a href="#laravel-1">Laravelの要素</a>
+      <ul>
+        <li><a href="#heading-2">ルーティング</a></li>
+        <li><a href="#heading-3">ビュー</a></li>
+        <li><a href="#heading-4">コントローラ</a></li>
+      </ul>
+    </li>
+    <li><a href="#laravel-form-builder">Laravel Form Builderを使った時のリクエストの取り出し方</a></li>
+    <li><a href="#heading-5">参考リンク集</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="環境">環境</h2>
-
+      <h2 id="heading">環境</h2>
 <ul>
-<li>Mac OS Mojave 10.14.2<br /></li>
-<li>PHP 7.1.19<br />
-<br /></li>
+<li>Mac OS Mojave 10.14.2</li>
+<li>PHP 7.1.19</li>
 </ul>
-
-<h2 id="必要なもののインストール">必要なもののインストール</h2>
+<h2 id="heading-1">必要なもののインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">composer global require laravel/installer</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">composer global require laravel/installer
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="laravelプロジェクトの作成">Laravelプロジェクトの作成</h2>
+</div><h2 id="laravel">Laravelプロジェクトの作成</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -191,34 +180,26 @@
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> &lt;INSTALL_DIR&gt;
 laravel new &lt;PROJECT_NAME&gt;
 <span class="nb">cd</span> &lt;PROJECT_NAME&gt;
-composer install</code></pre></td></tr></table>
+composer install
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="laravelの要素">Laravelの要素</h2>
-
-<h3 id="ルーティング">ルーティング</h3>
-
-<p>場所<br />
+</div><h2 id="laravel-1">Laravelの要素</h2>
+<h3 id="heading-2">ルーティング</h3>
+<p>場所
 <code>routes/web.php</code></p>
-
-<h3 id="ビュー">ビュー</h3>
-
-<p>場所<br />
+<h3 id="heading-3">ビュー</h3>
+<p>場所
 <code>resources/views/&lt;VIEW_NAME&gt;.blade.php</code></p>
-
-<h3 id="コントローラ">コントローラ</h3>
-
-<p>つくる<br />
-<code>php artisan make:controller &lt;VIEW_NAME&gt;Controller</code><br />
-場所<br />
+<h3 id="heading-4">コントローラ</h3>
+<p>つくる
+<code>php artisan make:controller &lt;VIEW_NAME&gt;Controller</code>
+場所
 <code>app/Http/Controllers/&lt;VIEW_NAME&gt;Controller.php</code></p>
-
-<h2 id="laravel-form-builderを使った時のリクエストの取り出し方">Laravel Form Builderを使った時のリクエストの取り出し方</h2>
-
+<h2 id="laravel-form-builder">Laravel Form Builderを使った時のリクエストの取り出し方</h2>
 <p>ネット上には引数として直接<code>$request</code>を受け取っているサンプルが多かったが、$formBuilderからリクエストを取り出してやることでそれらのサンプルコードと同様の処理ができる</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -231,27 +212,22 @@ composer install</code></pre></td></tr></table>
     $form = $formBuilder-&gt;create(\App\Forms\SomeForm::class);
     // リクエストを取り出す
     $request = $form-&gt;getRequest();
-(中略)</code></pre></td></tr></table>
+(中略)
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="参考リンク集">参考リンク集</h2>
-
-<p>データベース：マイグレーション 5.5 Laravel<br />
-<a href="https://readouble.com/laravel/5.5/ja/migrations.html" target="_blank">https://readouble.com/laravel/5.5/ja/migrations.html</a></p>
-
-<p>kristijanhusak/laravel-form-builder リポジトリ<br />
-<a href="https://github.com/kristijanhusak/laravel-form-builder" target="_blank">https://github.com/kristijanhusak/laravel-form-builder</a><br />
-Laravel form builderのドキュメント<br />
-<a href="https://kristijanhusak.github.io/laravel-form-builder/" target="_blank">https://kristijanhusak.github.io/laravel-form-builder/</a></p>
-
-<p>(Laravel) fillを使ってモデルの複数カラムを更新する - Qiita<br />
-<a href="https://qiita.com/tkt989/items/c2e01ec2fe91ef5f08d2" target="_blank">https://qiita.com/tkt989/items/c2e01ec2fe91ef5f08d2</a></p>
-
-<p>Laravel5.6 ログインユーザー情報取得と表示 - Qiita<br />
-<a href="https://qiita.com/kim_kou/items/b95af87568cdbf06fa61" target="_blank">https://qiita.com/kim_kou/items/b95af87568cdbf06fa61</a></p>
-
-<p>Laravel5.6 入力画面から完了画面までの流れ<br />
-<a href="https://9cubed.info/article/laravel5/laravel_5_app/" target="_blank">https://9cubed.info/article/laravel5/laravel_5_app/</a><br />
+</div><h2 id="heading-5">参考リンク集</h2>
+<p>データベース：マイグレーション 5.5 Laravel
+<a href="https://readouble.com/laravel/5.5/ja/migrations.html">https://readouble.com/laravel/5.5/ja/migrations.html</a></p>
+<p>kristijanhusak/laravel-form-builder リポジトリ
+<a href="https://github.com/kristijanhusak/laravel-form-builder">https://github.com/kristijanhusak/laravel-form-builder</a>
+Laravel form builderのドキュメント
+<a href="https://kristijanhusak.github.io/laravel-form-builder/">https://kristijanhusak.github.io/laravel-form-builder/</a></p>
+<p>(Laravel) fillを使ってモデルの複数カラムを更新する - Qiita
+<a href="https://qiita.com/tkt989/items/c2e01ec2fe91ef5f08d2">https://qiita.com/tkt989/items/c2e01ec2fe91ef5f08d2</a></p>
+<p>Laravel5.6 ログインユーザー情報取得と表示 - Qiita
+<a href="https://qiita.com/kim_kou/items/b95af87568cdbf06fa61">https://qiita.com/kim_kou/items/b95af87568cdbf06fa61</a></p>
+<p>Laravel5.6 入力画面から完了画面までの流れ
+<a href="https://9cubed.info/article/laravel5/laravel_5_app/">https://9cubed.info/article/laravel5/laravel_5_app/</a>
 入力画面→確認画面→完了画面のセッションの扱いとか</p>
 
     </div>
